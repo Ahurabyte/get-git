@@ -2,55 +2,55 @@ export const gameDevCompleteSeries = {
   pageName: "Game Development – Complete Beginner Programmer Series",
   cards: [
     {
-      title: "Game Development",
+      title: "توسعه‌ی بازی",
       kind: "default",
-      desc: "A complete introduction to game development for beginner programmers",
+      desc: "یک معرفی کامل به توسعه‌ی بازی برای برنامه‌نویس‌های مبتدی",
       icon: "./assets/controller.png",
       style: "bg-candy-blue-sky",
     },
 
     {
-      title: "What Is Game Development?",
+      title: "توسعه‌ی بازی چیست؟",
       kind: "reaction",
       desc: `
-Game development is the process of building **interactive real-time systems**.
+توسعه‌ی بازی فرآیند ساخت **سیستم‌های تعاملی بلادرنگ** است.
 
-From a programmer’s perspective:
-- Continuous execution (loop)
-- Constant state mutation
-- Input-driven logic
-- Visual and audio output
+از دید یک برنامه‌نویس:
+- اجرای پیوسته (loop)
+- تغییر مداوم state
+- منطق ورودی‌محور
+- خروجی تصویری و صوتی
 
-Games are software, but they behave very differently.
+بازی‌ها نرم‌افزار هستند، ولی رفتارشان خیلی متفاوت است.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#04BFA4]",
     },
 
     {
-      title: "Games vs Traditional Software",
+      title: "بازی‌ها در برابر نرم‌افزارهای سنتی",
       kind: "reaction",
       desc: `
-Traditional software:
-- Event-based
-- User waits for response
-- Often linear
+نرم‌افزار سنتی:
+- رویدادمحور
+- کاربر منتظر پاسخ می‌ماند
+- اغلب خطی
 
-Games:
-- Always running
-- Time-dependent
-- Frame-based
-- Reactive every millisecond
+بازی‌ها:
+- همیشه در حال اجرا
+- وابسته به زمان
+- مبتنی بر فریم
+- هر میلی‌ثانیه واکنش‌گرا
       `,
       icon: "./assets/controller.png",
       style: "bg-[#FFE87E]",
     },
 
     {
-      title: "The Game Loop",
+      title: "حلقه‌ی بازی (Game Loop)",
       kind: "reaction",
       desc: `
-Every game is built around a loop:
+هر بازی حول یک loop ساخته شده:
 
 while (running) {
   handleInput()
@@ -58,151 +58,151 @@ while (running) {
   renderFrame()
 }
 
-Master this concept and everything else becomes easier.
+اگر این مفهوم را یاد بگیری، بقیه‌ی همه‌چیز راحت‌تر می‌شود.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#C5C6FF]",
     },
 
     {
-      title: "Game State",
+      title: "State بازی",
       kind: "reaction",
       desc: `
-State represents the current snapshot of the game.
+State یعنی تصویر لحظه‌ای فعلی از بازی.
 
-Examples:
-- Player position
-- Health
-- Enemies alive
-- Current level
+مثال‌ها:
+- موقعیت بازیکن
+- سلامتی (Health)
+- دشمن‌های زنده
+- مرحله‌ی فعلی
 
-Gameplay is simply state changing over time.
+گیم‌پلی یعنی state که در طول زمان تغییر می‌کند.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#7B9D7C]",
     },
 
     {
-      title: "Core Building Blocks of Games",
+      title: "بلوک‌های سازنده‌ی اصلی بازی‌ها",
       kind: "reaction",
       desc: `
-Most games include:
-- Player entities
-- World or map
-- Rules
-- Win / lose conditions
-- Feedback (visual & sound)
+بیشتر بازی‌ها این‌ها را دارند:
+- موجودیت‌های بازیکن
+- دنیا یا نقشه
+- قوانین
+- شرایط برد / باخت
+- بازخورد (تصویری و صوتی)
 
-These are logical systems before they are art.
+این‌ها قبل از اینکه هنر باشند، سیستم‌های منطقی هستند.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#FFA9E8]",
     },
     {
-      title: "Short History of Games",
+      title: "تاریخچه‌ی کوتاه بازی‌ها",
       kind: "reaction",
       desc: `
-- 1970s: Arcade & Pong
-- 1980s: Home consoles
-- 1990s: 3D revolution
-- 2000s: PC & online games
-- 2010s: Indie explosion
-- Today: AAA, VR, AI, Web games
+- دهه‌ی ۱۹۷۰: آرکید و Pong
+- دهه‌ی ۱۹۸۰: کنسول‌های خانگی
+- دهه‌ی ۱۹۹۰: انقلاب سه‌بعدی
+- دهه‌ی ۲۰۰۰: بازی‌های PC و آنلاین
+- دهه‌ی ۲۰۱۰: انفجار ایندی
+- امروز: AAA، VR، AI، بازی‌های وب
       `,
       icon: "./assets/controller.png",
       style: "bg-[#F7BD1D]",
     },
 
     {
-      title: "Game Development Scales",
+      title: "مقیاس‌های توسعه‌ی بازی",
       kind: "reaction",
       desc: `
-- Solo developer
-- Indie teams
-- AAA studios
+- توسعه‌دهنده‌ی انفرادی
+- تیم‌های ایندی
+- استودیوهای AAA
 
-Each scale requires different skills and expectations.
+هر مقیاس مهارت‌ها و انتظارات متفاوتی می‌خواهد.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#04BFA4]",
     },
 
     {
-      title: "Solo Developers",
+      title: "توسعه‌دهنده‌های انفرادی",
       kind: "reaction",
       desc: `
-Solo devs handle everything:
-- Code
-- Design
-- Art
-- Testing
+توسعه‌دهنده‌های انفرادی همه‌چیز را خودشان انجام می‌دهند:
+- کد
+- طراحی
+- هنر
+- تست
 
-Clean architecture and scope control are critical.
+معماری تمیز و کنترل محدوده (scope) حیاتی است.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#FFE87E]",
     },
 
     {
-      title: "Indie Teams",
+      title: "تیم‌های ایندی",
       kind: "reaction",
       desc: `
-Small teams (2–10 people):
-- Strong creative vision
-- Fast iteration
-- Limited resources
+تیم‌های کوچک (۲ تا ۱۰ نفر):
+- چشم‌انداز خلاقانه‌ی قوی
+- تکرار سریع
+- منابع محدود
 
-Gameplay quality beats visual fidelity.
+کیفیت گیم‌پلی مهم‌تر از وفاداری بصری است.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#C5C6FF]",
     },
 
     {
-      title: "AAA Studios",
+      title: "استودیوهای AAA",
       kind: "reaction",
       desc: `
-Large studios with specialization:
-- Gameplay programmers
-- Engine programmers
-- AI, physics, networking teams
+استودیوهای بزرگ با تخصص‌گرایی:
+- برنامه‌نویس‌های گیم‌پلی
+- برنامه‌نویس‌های موتور
+- تیم‌های AI، فیزیک، شبکه
 
-Highly structured development.
+توسعه‌ی بسیار ساخت‌یافته.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#7B9D7C]",
     },
     {
-      title: "Game Engine vs Framework",
+      title: "موتور بازی در برابر فریم‌ورک",
       kind: "reaction",
       desc: `
-Game Engine:
-- Full editor
-- Visual tools
-- High abstraction
+موتور بازی (Game Engine):
+- ادیتور کامل
+- ابزارهای بصری
+- انتزاع بالا
 
-Game Framework:
-- Code-first
-- Minimal tooling
-- Full architectural control
+فریم‌ورک بازی (Game Framework):
+- اول کد
+- ابزار کم
+- کنترل کامل معماری
 
-Frameworks are ideal for learning fundamentals.
+فریم‌ورک‌ها برای یادگیری مبانی ایده‌آل هستند.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#FFA9E8]",
     },
 
     {
-      title: "Why Beginner Programmers Should Use Frameworks",
+      title: "چرا برنامه‌نویس‌های مبتدی باید از فریم‌ورک استفاده کنند",
       kind: "reaction",
       desc: `
-Frameworks force you to understand:
-- Loops
-- State
-- Architecture
-- Data flow
+فریم‌ورک‌ها تو را مجبور می‌کنند این‌ها را بفهمی:
+- حلقه‌ها
+- state
+- معماری
+- جریان داده
 
-You learn how games actually work.
+یاد می‌گیری بازی‌ها واقعاً چطور کار می‌کنند.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#07AF57]",
@@ -211,94 +211,94 @@ You learn how games actually work.
       title: "LÖVE (LOVE2D)",
       kind: "reaction",
       desc: `
-LÖVE is a lightweight 2D game framework using Lua.
+LÖVE یک فریم‌ورک سبک بازی دوبعدی با Lua است.
 
-Characteristics:
-- No editor
-- Minimal abstraction
-- High performance
-- Cross-platform
+ویژگی‌ها:
+- بدون ادیتور
+- حداقل انتزاع
+- عملکرد بالا
+- چندسکویی
 
-It is programmer-focused by design.
+ذاتاً برنامه‌نویس‌محور طراحی شده.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#04BFA4]",
     },
 
     {
-      title: "Why LOVE2D Is Ideal for Beginners",
+      title: "چرا LOVE2D برای مبتدی‌ها ایده‌آل است",
       kind: "reaction",
       desc: `
-LOVE2D teaches:
-- Real game loops
-- Manual state handling
-- Clean separation of logic and rendering
+LOVE2D این‌ها را یاد می‌دهد:
+- حلقه‌های واقعی بازی
+- مدیریت دستی state
+- جدایی تمیز منطق و رندر
 
-No hidden magic.
+هیچ جادوی پنهانی نیست.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#FFE87E]",
     },
 
     {
-      title: "LOVE2D Core Callbacks",
+      title: "Callbackهای اصلی LOVE2D",
       kind: "reaction",
       desc: `
-Core lifecycle functions:
+توابع اصلی چرخه‌ی حیات:
 - love.load()
 - love.update(dt)
 - love.draw()
 - love.keypressed(key)
 
-These map directly to game theory concepts.
+این‌ها مستقیم به مفاهیم تئوری بازی نگاشت می‌شوند.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#C5C6FF]",
     },
 
     {
-      title: "LOVE2D Game Loop Explained",
+      title: "حلقه‌ی بازی LOVE2D توضیح داده شد",
       kind: "reaction",
       desc: `
-LOVE2D runs an internal loop and calls your code.
+LOVE2D یک loop داخلی اجرا می‌کند و کد تو را صدا می‌زند.
 
-You control:
-- What updates each frame
-- How state changes
-- What gets drawn
+تو کنترل می‌کنی:
+- هر فریم چه چیزی به‌روز شود
+- state چطور تغییر کند
+- چه چیزی کشیده شود
 
-Time-based logic is explicit via dt.
+منطق مبتنی بر زمان با dt صریح است.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#7B9D7C]",
     },
 
     {
-      title: "State Management in LOVE2D",
+      title: "مدیریت State در LOVE2D",
       kind: "reaction",
       desc: `
-You store state manually:
-- Tables for entities
-- Numbers for stats
-- Flags for modes
+state را دستی ذخیره می‌کنی:
+- جدول‌ها (Tables) برای موجودیت‌ها
+- اعداد برای آمار
+- flagها برای حالت‌ها
 
-This builds strong architectural intuition.
+این شهود معماری قوی می‌سازد.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#FFA9E8]",
     },
 
     {
-      title: "Common LOVE2D Architecture Patterns",
+      title: "الگوهای معماری رایج LOVE2D",
       kind: "reaction",
       desc: `
-Typical patterns:
-- Scene / State machines
-- Entity lists
-- Component-like tables
-- Update / draw separation
+الگوهای معمول:
+- ماشین حالت Scene / State
+- لیست موجودیت‌ها
+- جدول‌های شبه‌کامپوننت
+- جدایی update / draw
 
-These transfer directly to Godot & Unity.
+این‌ها مستقیم به Godot و Unity منتقل می‌شوند.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#07AF57]",
@@ -307,16 +307,16 @@ These transfer directly to Godot & Unity.
       title: "pygame",
       kind: "reaction",
       desc: `
-Python-based game library.
+یک کتابخانه‌ی بازی مبتنی بر Python.
 
-Pros:
-- Very explicit logic
-- Familiar syntax
-- Educational
+مزایا:
+- منطق بسیار صریح
+- سینتکس آشنا
+- آموزشی
 
-Cons:
-- Manual systems
-- Lower performance
+معایب:
+- سیستم‌های دستی
+- عملکرد پایین‌تر
       `,
       icon: "./assets/controller.png",
       style: "bg-[#04BFA4]",
@@ -326,12 +326,12 @@ Cons:
       title: "TIC-80",
       kind: "reaction",
       desc: `
-Fantasy console with constraints:
-- Fixed resolution
-- Limited colors
-- Lua scripting
+کنسول فانتزی با محدودیت‌ها:
+- وضوح ثابت
+- رنگ‌های محدود
+- اسکریپت‌نویسی Lua
 
-Constraints improve design thinking.
+محدودیت‌ها تفکر طراحی را بهتر می‌کنند.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#F7BD1D]",
@@ -341,12 +341,12 @@ Constraints improve design thinking.
       title: "PICO-8",
       kind: "reaction",
       desc: `
-Highly opinionated fantasy console.
+کنسول فانتزی با دیدگاه قوی.
 
-Best for:
-- Tiny games
-- Game jams
-- Gameplay experimentation
+بهترین برای:
+- بازی‌های کوچک
+- گیم‌جم‌ها
+- آزمایش گیم‌پلی
       `,
       icon: "./assets/controller.png",
       style: "bg-[#FFE87E]",
@@ -356,70 +356,70 @@ Best for:
       title: "Kaplay (JavaScript)",
       kind: "reaction",
       desc: `
-JavaScript game framework.
+فریم‌ورک بازی JavaScript.
 
-Good for:
-- Web developers
-- Rapid prototyping
-- Component-style design
+خوب برای:
+- توسعه‌دهنده‌های وب
+- پروتوتایپ سریع
+- طراحی به سبک کامپوننت
       `,
       icon: "./assets/controller.png",
       style: "bg-[#C5C6FF]",
     },
 
     {
-      title: "Framework Comparison",
+      title: "مقایسه‌ی فریم‌ورک‌ها",
       kind: "reaction",
       desc: `
-Best by goal:
-- Fundamentals → LOVE2D / pygame
-- Creativity → PICO-8 / TIC-80
-- Web → Kaplay
+بهترین بر اساس هدف:
+- مبانی → LOVE2D / pygame
+- خلاقیت → PICO-8 / TIC-80
+- وب → Kaplay
       `,
       icon: "./assets/controller.png",
       style: "bg-[#7B9D7C]",
     },
     {
-      title: "Common Beginner Traps",
+      title: "دام‌های رایج مبتدی‌ها",
       kind: "reaction",
       desc: `
-- Building engines instead of games
-- Overengineering
-- Premature optimization
-- Ignoring game feel
+- ساخت موتور به‌جای بازی
+- مهندسی بیش از حد
+- بهینه‌سازی زودهنگام
+- نادیده گرفتن حس بازی (game feel)
 
-Finish small games first.
+اول بازی‌های کوچک را تمام کن.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#FF6B6B]",
     },
 
     {
-      title: "Suggested Learning Path",
+      title: "مسیر یادگیری پیشنهادی",
       kind: "reaction",
       desc: `
-1. Learn game loop
-2. Manage state
-3. Handle input
-4. Build 2–3 small games
-5. Move to Godot or Unity
+۱. حلقه‌ی بازی را یاد بگیر
+۲. state را مدیریت کن
+۳. ورودی را مدیریت کن
+۴. ۲ تا ۳ بازی کوچک بساز
+۵. به Godot یا Unity برو
       `,
       icon: "./assets/controller.png",
       style: "bg-[#04BFA4]",
     },
 
     {
-      title: "Final Advice",
+      title: "توصیه‌ی نهایی",
       kind: "reaction",
       desc: `
-Games are systems, not graphics.
+بازی‌ها سیستم هستند، نه گرافیک.
 
-If you can:
-- Control time
-- Control state
-- Control rules
+اگر بتوانی:
+- زمان را کنترل کنی
+- state را کنترل کنی
+- قوانین را کنترل کنی
 
-You can build games.
+می‌توانی بازی بسازی.
       `,
       icon: "./assets/controller.png",
       style: "bg-[#7B9D7C]",

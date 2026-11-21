@@ -1,55 +1,61 @@
 <img width="1470" height="956" alt="1405-06-12_18-26-45" src="https://github.com/user-attachments/assets/c5e8dad4-84e9-4497-b3cd-36e09e344355" />
 
+# گت‌گیت — نسخه‌ی فارسی
+
+این نسخه‌ی فارسی [Get-Git](https://github.com/ParsaBordbar/get-git) است؛ پروژه‌ی اصلی کار [Parsa Bordbar](https://github.com/ParsaBordbar) است و ترجمه‌ی فارسی کارت‌ها و رابط کاربری را من (Ahura) انجام دادم. دستورات گیت و اصطلاحات تخصصی (commit، branch، merge و…) به انگلیسی مانده‌اند.
+
+نسخه‌ی زنده‌ی فارسی را این‌جا بخوانید: [ahurabyte.github.io/get-git](https://ahurabyte.github.io/get-git/)
+
 # Get-Git
 
-Get-Git is an open-source React app that teaches Git with flash cards. It is a sub-project of a broader open-source learning platform focused on teaching the 20% of a topic you need for 80% of real-world workflows.
+گت‌گیت یک اپ متن‌باز با React است که گیت را با فلش‌کارت یاد می‌دهد. بخشی از یک پلتفرم آموزشی متن‌باز بزرگ‌تر است که روی یک ایده ساخته شده: به‌جای یادگیری همه‌چیز، همان بیست درصدی را یاد بگیر که هشتاد درصد کارهای واقعی را پوشش می‌دهد.
 
-Read it live at [parsabordbar.github.io/get-git](https://parsabordbar.github.io/get-git/).
+نسخه‌ی اصلی (انگلیسی) را این‌جا بخوانید: [parsabordbar.github.io/get-git](https://parsabordbar.github.io/get-git/)
 
-## Features
+## امکانات
 
-- **Flash-card series.** Eleven short series, each a scrolling deck of cards with a title, tags, markdown body, and copyable commands. A few minutes each.
-- **Progress tracking.** Every series ends with a done checkbox. Finished series get a check mark on the home page and in the menu, and the home page shows how many are done with a reset link. Progress lives in your browser's local storage; nothing is sent anywhere.
-- **Continue where you left off.** The home page button starts you on Basics, then moves to the next unfinished series as you go.
-- **Tags.** Every card is tagged. Click a tag to see all cards about it across every series, or browse the full tag index at `/tags`.
-- **Reactions.** Emoji buttons under cards toggle and show a small count. Counts are per device.
-- **Gitmoji reference.** A searchable list of commit emoji with one-click copy for both the emoji and its `:code:`.
-- **Mobile menu.** A burger menu on small screens lists every series and the tag index, with the current page highlighted.
-- **Series navigation.** Previous and next arrows, a Home button, a card-and-minute count, and a read-progress bar along the page edge.
-- **Installable.** Web app manifest and a service worker, so the site can be added to a home screen and opened offline.
+- **سری‌های فلش‌کارت.** یازده سری کوتاه که هر کدام یک دسته کارت قابل اسکرول است با عنوان، برچسب، متن مارک‌داون و دستورهای قابل کپی. هر سری چند دقیقه طول می‌کشد.
+- **پیگیری پیشرفت.** انتهای هر سری یک تیک تکمیل هست. سری‌های تمام‌شده در صفحه‌ی اصلی و در منو علامت می‌خورند و صفحه‌ی اصلی نشان می‌دهد چند سری تمام شده، با لینک بازنشانی. پیشرفت فقط در local storage مرورگر خودت ذخیره می‌شود و جایی فرستاده نمی‌شود.
+- **ادامه از جایی که مانده‌ای.** دکمه‌ی صفحه‌ی اصلی اول از مبانی شروع می‌کند و بعد سراغ اولین سری ناتمام می‌رود.
+- **برچسب‌ها.** هر کارت برچسب دارد. روی یک برچسب بزنی، همه‌ی کارت‌های همان موضوع را در همه‌ی سری‌ها می‌بینی، یا می‌توانی از فهرست کامل برچسب‌ها در `/tags` مرور کنی.
+- **واکنش‌ها.** دکمه‌های ایموجی زیر کارت‌ها که واکنش را تغییر می‌دهند و تعدادش را نشان می‌دهند. تعدادها فقط روی همان دستگاه است.
+- **مرجع گیت‌موجی.** یک فهرست قابل جست‌وجوی ایموجی‌های کامیت، که ایموجی و `:code:` آن با یک کلیک کپی می‌شود.
+- **منوی موبایل.** روی صفحه‌های کوچک، منوی همبرگری همه‌ی سری‌ها و فهرست برچسب‌ها را نشان می‌دهد و صفحه‌ی فعلی مشخص است.
+- **ناوبری بین سری‌ها.** فلش‌های قبلی و بعدی، دکمه‌ی خانه، تعداد کارت‌ها و دقیقه‌ها، و یک نوار پیشرفت خواندن کنار صفحه.
+- **قابل نصب.** با منیفست وب‌اپ و سرویس‌ورکر می‌توانی آن را به صفحه‌ی اصلی گوشی اضافه کنی و آفلاین هم بازش کنی.
 
-## Series
+## سری‌ها
 
-1. **Basics**: daily workflow commands like `git status`, `git add`, `git commit`, and `git push`
-2. **Changes**: inspecting changes with `git status`, `git log`, `git diff`, and `git restore`
-3. **Commit**: writing good commit messages, commit types, and best practices
-4. **Branches**: creating, switching, and managing branches
-5. **Merge**: bringing two branches back together
-6. **GitHub**: remotes, cloning, forks, pull requests, and writing a README in markdown
-7. **Conflicts**: reading conflict markers and resolving merge conflicts
-8. **Abort**: backing out of a merge, rebase, or cherry-pick gone wrong
-9. **Stash**: parking work and coming back to it later
-10. **Undo**: recovering lost commits and undoing mistakes
-11. **Gitmoji** _(extra)_: an emoji at the start of a commit message says what it does
+1. **مبانی**: دستورهای روزانه مثل `git status` ،`git add` ،`git commit` و `git push`
+2. **تغییرات**: بررسی تغییرات با `git status` ،`git log` ،`git diff` و `git restore`
+3. **کامیت**: نوشتن پیام کامیت خوب، نوع‌های کامیت و بهترین روش‌ها
+4. **برنچ‌ها**: ساختن، جابه‌جا شدن و مدیریت برنچ‌ها
+5. **مرج**: دو برنچ را دوباره به هم برگرداندن
+6. **گیت‌هاب**: ریموت‌ها، کلون کردن، فورک‌ها، پول‌ریکوئست‌ها و نوشتن README با مارک‌داون
+7. **کانفلیکت‌ها**: خواندن نشانه‌های کانفلیکت و حل مرج کانفلیکت‌ها
+8. **لغو**: برگشتن از یک مرج، ری‌بیس یا چری‌پیک خراب
+9. **استش**: پارک کردن کارت و برگشتن سراغش بعداً
+10. **برگرداندن**: بازیابی کامیت‌های گم‌شده و برگرداندن اشتباه‌ها
+11. **گیت‌موجی** _(اضافی)_: یک ایموجی در ابتدای پیام کامیت می‌گوید آن کامیت چه کار می‌کند
 
-## Local Usage
+## اجرای محلی
 
-1. **Clone the repo**:
+1. **کلون کردن ریپو**:
    ```bash
-   git clone https://github.com/ParsaBordbar/get-git.git
+   git clone https://github.com/Ahurabyte/get-git.git
    cd get-git
    ```
-2. **Install dependencies**:
+2. **نصب وابستگی‌ها**:
    ```bash
    npm install
    ```
-3. **Start the development server**:
+3. **اجرای سرور توسعه**:
    ```bash
    npm run dev
    ```
-4. **Open** `http://localhost:5173/get-git/` in your browser.
+4. در مرورگر باز کن: `http://localhost:5173/get-git/`
 
-Other scripts:
+اسکریپت‌های دیگر:
 
 ```bash
 npm run build     # type-check and build to dist/
@@ -59,41 +65,41 @@ npm run lint      # eslint
 npm run format    # prettier
 ```
 
-## Adding a Series
+## اضافه کردن یک سری
 
-1. Add a data file under `src/data/gitCrashCourse/` exporting `{ pageName, cards }`.
-2. Add a page under `src/pages/` that renders `FlashCardSeries` with those cards.
-3. Add the route in `src/routes/routes.tsx`.
-4. Add an entry to `src/data/series.ts` (path, title, description, icon, colour). This one entry wires the home grid, the mobile menu, previous/next arrows, and progress tracking.
-5. Map the path to its cards in `src/data/cards.ts` so its tags show up on tag pages.
+1. یک فایل داده زیر `src/data/gitCrashCourse/` اضافه کن که `{ pageName, cards }` را export کند.
+2. یک صفحه زیر `src/pages/` اضافه کن که `FlashCardSeries` را با آن کارت‌ها رندر کند.
+3. مسیر (route) را در `src/routes/routes.tsx` اضافه کن.
+4. یک ورودی به `src/data/series.ts` اضافه کن (path، title، description، icon، colour). همین یک ورودی، گرید خانه، منوی موبایل، فلش‌های قبلی/بعدی و پیگیری پیشرفت را وصل می‌کند.
+5. مسیر را در `src/data/cards.ts` به کارت‌هایش map کن تا برچسب‌هایش در صفحه‌های برچسب دیده شوند.
 
-## Directory Structure
+## ساختار پوشه‌ها
 
-- `src/pages` — one page per series, plus Home and Tags
-- `src/components` — Card, FlashCardSeries, Header (mobile menu), SideNav, Abstract, ProgressCheck, ReactionBar, and friends
-- `src/data` — card content for each series, the series registry, and the tag index
-- `src/lib` — local-storage stores for progress and reactions
-- `public` — static assets, web app manifest, icons, and the service worker
-- `RELEASE.md` — release notes
-- `LICENSE` — project license (CC BY-NC-SA 4.0)
+- `src/pages` — یک صفحه برای هر سری، به‌علاوه‌ی Home و Tags
+- `src/components` — ‏Card ،FlashCardSeries ،Header (منوی موبایل)، SideNav ،Abstract ،ProgressCheck ،ReactionBar و بقیه
+- `src/data` — محتوای کارت‌های هر سری، رجیستری سری‌ها و فهرست برچسب‌ها
+- `src/lib` — استورهای local storage برای پیشرفت و واکنش‌ها
+- `public` — فایل‌های استاتیک، منیفست وب‌اپ، آیکون‌ها و سرویس‌ورکر
+- `RELEASE.md` — یادداشت‌های انتشار
+- `LICENSE` — لایسنس پروژه (CC BY-NC-SA 4.0)
 
-## Contributing
+## مشارکت
 
-Contributions are welcome. Please keep in mind:
+مشارکت آزاد است. لطفاً این‌ها را در نظر بگیر:
 
-- This project is free to use for educational and open-source purposes only.
-- Commercial use is not permitted under the license.
-- Feel free to open issues or submit pull requests for bug fixes, new series, or improvements.
+- این پروژه فقط برای استفاده‌ی آموزشی و متن‌باز رایگان است.
+- استفاده‌ی تجاری تحت لایسنس مجاز نیست.
+- برای رفع باگ، سری جدید یا بهبود، ایشو باز کن یا پول‌ریکوئست بفرست.
 
-## License
+## لایسنس
 
-This project is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](LICENSE).
+این پروژه تحت [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](LICENSE) منتشر شده.
 
 ---
 
-###### Coming up
+###### در راه است
 
-- Global reaction counts backed by a shared store
-- More series and a Docker image for local usage
+- شمارش سراسری واکنش‌ها با یک ذخیره‌ی مشترک
+- سری‌های بیشتر و یک ایمیج Docker برای استفاده‌ی محلی
 
-_Happy Git learning!_
+_گیت را خوب یاد بگیر!_

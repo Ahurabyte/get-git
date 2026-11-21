@@ -18,12 +18,12 @@ function Git() {
       <section className="grid items-center gap-10 py-12 sm:py-16 lg:grid-cols-[1fr_auto] lg:py-24">
         <div className="max-w-xl">
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.95] text-slate-900">
-            Git, one card at a time.
+            گیت، کارت‌به‌کارت.
           </h1>
           <p className="mt-6 text-lg sm:text-xl font-medium text-slate-900/80">
-            {series.length} short series that take you from your first commit
-            to untangling a merge conflict. Pick one, flip through, done in a
-            few minutes.
+            {series.length} سری کوتاه که از اولین کامیت تا باز کردن گره یک
+            merge conflict همراهت هستند. یکی را انتخاب کن، ورق بزن، چند
+            دقیقه‌ای تمام می‌شود.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
@@ -32,24 +32,24 @@ function Git() {
                 border-2 border-x-4 border-t-2 border-b-[6px] border-stone-850
                 transition-transform duration-100 hover:-translate-y-0.5 active:translate-y-0.5"
             >
-              {count === 0 ? `Start with ${next.title}` : count === series.length ? "Start over" : `Continue with ${next.title}`}
+              {count === 0 ? `شروع با ${next.title}` : count === series.length ? "از اول شروع کن" : `ادامه با ${next.title}`}
             </a>
             <a
               href="https://github.com/ParsaBordbar/get-git"
               className="font-bold !text-slate-900 underline decoration-2 underline-offset-4"
             >
-              Source on GitHub
+              سورس در گیت‌هاب
             </a>
           </div>
           {count > 0 && (
             <p className="mt-5 font-medium text-slate-900/70">
-              {count} of {series.length} series done.{" "}
+              {count} از {series.length} سری تمام شد.{" "}
               <button
                 type="button"
                 onClick={reset}
                 className="cursor-pointer font-bold !text-slate-900 underline decoration-2 underline-offset-4"
               >
-                Reset progress
+                بازنشانی پیشرفت
               </button>
             </p>
           )}
@@ -71,7 +71,7 @@ function Git() {
         </div>
       </section>
 
-      <section aria-label="Series">
+      <section aria-label="سری‌ها">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {series.map((entry: seriesEntry, i: number) => (
             <SeriesTile key={entry.path} entry={entry} index={i} done={isDone(entry.path)} />
@@ -80,10 +80,10 @@ function Git() {
       </section>
 
       <footer className="mt-16 flex flex-wrap items-center justify-between gap-3 border-t-4 border-stone-850 pt-6 font-medium text-slate-900/70">
-        <span>Made by Parsa Bordbar</span>
+        <span>ساخته‌ی Parsa Bordbar</span>
         <span className="flex gap-5">
           <a href="/get-git/tags" className="!text-slate-900 underline decoration-2 underline-offset-4">
-            Browse by tag
+            مرور بر اساس برچسب
           </a>
           <a href="https://github.com/ParsaBordbar/get-git" className="!text-slate-900 underline decoration-2 underline-offset-4">
             GitHub

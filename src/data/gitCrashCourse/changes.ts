@@ -2,9 +2,9 @@ export const changes = {
   pageName: "changes",
   cards: [
     {
-      title: "Changes",
+      title: "تغییرات",
       kind: "reaction",
-      desc: `Or git stages and how to move between them!`,
+      desc: `یا همان stage های Git و اینکه چطور بین آن‌ها جابه‌جا شوی!`,
       tags: [
         {
           text: "git",
@@ -21,16 +21,16 @@ export const changes = {
       style: "bg-candy-yellow",
     },
     {
-      title: "Stages",
+      title: "مرحله‌ها",
       kind: "reaction",
       desc: `
-Files in Git can be in **two stages**:
+فایل‌ها در Git می‌توانند در **دو وضعیت** باشند:
     &nbsp;  
     &nbsp;  
-    **Tracked** - files that Git knows about and are added to the repository.
+    **Tracked** - فایل‌هایی که Git آن‌ها را می‌شناسد و به repository اضافه شده‌اند.
     &nbsp;  
     &nbsp;  
-    **Untracked** - files that are in your working directory, but not added to the repository
+    **Untracked** - فایل‌هایی که در working directory تو هستند، ولی به repository اضافه نشده‌اند.
         `,
       tags: [
         {
@@ -50,7 +50,7 @@ Files in Git can be in **two stages**:
     {
       title: "Git Status",
       kind: "reaction",
-      desc: `We can see files status with git status command:`,
+      desc: `می‌توانیم وضعیت فایل‌ها را با دستور git status ببینیم:`,
       tags: [
         {
           text: "git",
@@ -67,9 +67,9 @@ Files in Git can be in **two stages**:
       style: "bg-candy-yellow-sharp",
     },
     {
-      title: "Staged Files",
+      title: "فایل‌های Staged",
       kind: "reaction",
-      desc: `Staged files are files that are ready to be committed to the repository you are working on. We discussed more about staging in [this CardSet](/get-git/basics)!`,
+      desc: `فایل‌های Staged فایل‌هایی هستند که آماده‌ی commit شدن در repositoryای هستند که رویش کار می‌کنی. درباره‌ی staging بیشتر در [این مجموعه کارت](/get-git/basics) صحبت کردیم!`,
       tags: [
         {
           text: "git",
@@ -87,7 +87,7 @@ Files in Git can be in **two stages**:
     },
     {
       title: "Git Add",
-      desc: `You can add files to **staging area** so that git can keep track of the changes:`,
+      desc: `می‌توانی فایل‌ها را به **staging area** اضافه کنی تا Git تغییرات را دنبال کند:`,
       kind: "reaction",
       code: [
         {
@@ -110,8 +110,8 @@ Files in Git can be in **two stages**:
       style: "bg-candy-pink",
     },
     {
-      title: "Viewing & Comparing",
-      desc: `So you proudly Committed your code but you wanna see what have you committed until   now how you can see what have been done? `,
+      title: "دیدن و مقایسه کردن",
+      desc: `خب، با افتخار کدت را commit کردی، ولی می‌خواهی ببینی تا حالا چه چیزی commit کرده‌ای؛ چطور می‌توانی ببینی چه کارهایی انجام شده است؟`,
       kind: "reaction",
       style: "bg-candy-red",
       icon: "./assets/git.svg",
@@ -120,11 +120,11 @@ Files in Git can be in **two stages**:
       title: "Git Log",
       kind: "reaction",
       desc: `
- -Shows a history of commits in the repository.
+ -تاریخچه‌ی commit ها را در repository نشان می‌دهد.
     
  &nbsp;
 
- -Displays [commit hashes](/get-git/commit), author, date, and [messages](/get-git/commit).`,
+ -[هش‌های commit](/get-git/commit)، نویسنده، تاریخ و [پیام‌ها](/get-git/commit) را نمایش می‌دهد.`,
       tags: [
         {
           text: "git",
@@ -144,11 +144,11 @@ Files in Git can be in **two stages**:
           text: "git log",
         },
         {
-          label: "For a One-line summary use:",
+          label: "برای خلاصه‌ی یک‌خطی:",
           text: "git log --oneline",
         },
         {
-          label: "To see changes in commits:",
+          label: "برای دیدن تغییرات در commit ها:",
           text: "git log -p",
         },
       ],
@@ -168,12 +168,12 @@ Files in Git can be in **two stages**:
         },
       ],
       desc: `
-Displays detailed information about a **specific** commit.
+اطلاعات دقیق درباره‌ی یک commit **خاص** را نشان می‌دهد.
 
 &nbsp;
 &nbsp;
 
-Includes commit message, author, date, and code changes.`,
+شامل پیام commit، نویسنده، تاریخ و تغییرات کد است.`,
       kind: "reaction",
       style: "bg-candy-green-M",
       icon: "./assets/git.svg",
@@ -193,26 +193,26 @@ Includes commit message, author, date, and code changes.`,
           text: "version_control",
         },
       ],
-      desc: `We can Compere states and stages and commits with diff command!
+      desc: `با دستور diff می‌توانیم وضعیت‌ها، stage ها و commit ها را با هم مقایسه کنیم!
         `,
       kind: "reaction",
       style: "bg-candy-yellow-warm",
       icon: "./assets/git.svg",
       code: [
         {
-          label: "Compare working directory with last committed version:",
+          label: "مقایسه‌ی working directory با آخرین نسخه‌ی commit شده:",
           text: "git diff",
         },
         {
-          label: "Compare staged files with the last commit:",
+          label: "مقایسه‌ی فایل‌های staged با آخرین commit:",
           text: "git diff --staged",
         },
-        { label: "Compare Two Commits:", text: "git diff <commit1> <commit2>" },
+        { label: "مقایسه‌ی دو commit:", text: "git diff <commit1> <commit2>" },
       ],
     },
 
     {
-      title: "Undoing Changes",
+      title: "برگرداندن تغییرات",
       kind: "reaction",
       tags: [
         {
@@ -225,7 +225,7 @@ Includes commit message, author, date, and code changes.`,
           text: "version_control",
         },
       ],
-      desc: `So ... how we can Ctrl + z when we messed-up ?
+      desc: `خب… وقتی خرابکاری کردیم، چطور می‌توانیم Ctrl + z بزنیم؟
         `,
       style: "bg-candy-blue-sky",
       icon: "./assets/git.svg",
@@ -245,22 +245,22 @@ Includes commit message, author, date, and code changes.`,
           text: "version_control",
         },
       ],
-      desc: `We can **restore** a file or multiple files to previous committed versions.
+      desc: `می‌توانیم یک فایل یا چند فایل را به نسخه‌های قبلی commit شده **برگردانیم**.
         `,
       style: "bg-candy-teal",
       icon: "./assets/git.svg",
       code: [
         {
           text: "git restore <file>",
-          label: "Restoring Single Files:",
+          label: "برگرداندن یک فایل:",
         },
         {
           text: "git restore .",
-          label: "Restoring the Entire Repo:",
+          label: "برگرداندن کل Repo:",
         },
         {
           text: "git reset --soft HEAD~1",
-          label: "From Commit to stage:",
+          label: "از commit به stage:",
         },
       ],
     },

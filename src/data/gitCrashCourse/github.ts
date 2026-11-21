@@ -4,12 +4,12 @@ export const gitGithubConcepts: flashCardSeries = {
   pageName: "gitGithubConcepts",
   cards: [
     {
-      title: "What Is GitHub?",
-      desc: `**[GitHub](github.com)** is a cloud-based hosting service for Git repositories.  
-It lets you **store**, **share**, and **collaborate** on code with others online.
+      title: "گیت‌هاب چیست؟",
+      desc: `**[GitHub](github.com)** یک سرویس میزبانی ابری برای repositoryهای Git است.  
+به تو اجازه می‌دهد کد را آنلاین **ذخیره** کنی، **به اشتراک بگذاری** و با دیگران روی آن **همکاری** کنی.
 
-- Built on top of Git
-- Offers issue tracking, pull requests, CI/CD, and more`,
+- ساخته‌شده روی Git
+- ردیابی issue، pull request، CI/CD و بیشتر را ارائه می‌دهد`,
       kind: "reaction",
       tags: [
         { text: "github" },
@@ -20,13 +20,13 @@ It lets you **store**, **share**, and **collaborate** on code with others online
       style: "bg-candy-red",
     },
     {
-      title: "What Is a Repository?",
-      desc: `A **repository** (repo) is like a folder that stores your project's files and Git history.
+      title: "repository چیست؟",
+      desc: `یک **repository** (repo) مثل یک پوشه است که فایل‌های پروژه و تاریخچه‌ی Git تو را ذخیره می‌کند.
 
-- Local repo: On your machine
-- Remote repo: Hosted on GitHub
+- Local repo: روی دستگاه خودت
+- Remote repo: میزبانی‌شده روی GitHub
 
-You can connect both to **push** or **pull** changes.`,
+می‌توانی هر دو را به هم وصل کنی تا تغییرات را **push** یا **pull** کنی.`,
       kind: "reaction",
       tags: [
         { text: "git" },
@@ -37,16 +37,16 @@ You can connect both to **push** or **pull** changes.`,
       style: "bg-[#FFA9E8]",
     },
     {
-      title: "Clone a GitHub Repo",
-      desc: `To download a GitHub project locally, use \`git clone\`:`,
+      title: "Clone کردن یک repo از گیت‌هاب",
+      desc: `برای دانلود یک پروژه‌ی گیت‌هاب روی دستگاه خودت، از \`git clone\` استفاده کن:`,
       kind: "reaction",
       code: [
         {
-          label: "Using https:",
+          label: "با https:",
           text: "git clone https://github.com/user/repo.git",
         },
         {
-          label: "Using SSH Key:",
+          label: "با SSH Key:",
           text: "git clone git@github.com:user/repo.git",
         },
       ],
@@ -58,11 +58,11 @@ You can connect both to **push** or **pull** changes.`,
       style: "bg-[#F7BD1D]",
     },
     {
-      title: "Fork vs Clone",
-      desc: `- **Clone**: Copies a repo to your local machine  
-- **Fork**: Copies a repo to **your GitHub account**
+      title: "Fork در برابر Clone",
+      desc: `- **Clone**: یک repo را روی دستگاه محلی تو کپی می‌کند  
+- **Fork**: یک repo را روی **حساب گیت‌هاب خودت** کپی می‌کند
 
-Forking is great when you don't own the repo and want to contribute.`,
+Fork کردن عالی است وقتی مالک repo نیستی و می‌خواهی مشارکت کنی.`,
       kind: "reaction",
       tags: [
         { text: "github" },
@@ -73,15 +73,15 @@ Forking is great when you don't own the repo and want to contribute.`,
       style: "bg-[#FFCC70]",
     },
     {
-      title: "Branches in GitHub",
-      desc: `A **branch** allows you to work on new features or fixes separately.
+      title: "Branchها در گیت‌هاب",
+      desc: `یک **branch** به تو اجازه می‌دهد روی ویژگی‌ها یا اصلاحات جدید جداگانه کار کنی.
 
-Main branch: \`main\` or \`master\`  
-Create new branch:`,
+Branch اصلی: \`main\` یا \`master\`  
+ساخت branch جدید:`,
       kind: "reaction",
       code: [
         {
-          label: "Create a new branch:",
+          label: "ساخت یک branch جدید:",
           text: "git checkout -b feature-branch",
         },
       ],
@@ -93,13 +93,13 @@ Create new branch:`,
       style: "bg-[#C5C6FF]",
     },
     {
-      title: "Pull Requests (PR)",
-      desc: `A **pull request** is how you suggest changes to someone else's repository.
+      title: "Pull Requestها (PR)",
+      desc: `یک **pull request** راهی است که با آن تغییراتت را به repository شخص دیگری پیشنهاد می‌دهی.
 
-Steps:
-1. Fork → Clone → Create branch → Commit
-2. Push and open a PR on GitHub
-3. Discuss, review, and merge!`,
+مراحل:
+1. Fork → Clone → ساخت branch → Commit
+2. Push کن و روی GitHub یک PR باز کن
+3. بحث، بازبینی و merge!`,
       kind: "reaction",
       tags: [
         { text: "github" },
@@ -109,16 +109,16 @@ Steps:
       style: "bg-[#04BFA4]",
     },
     {
-      title: "Add Remote Origin",
-      desc: `If your local repo isn’t linked to GitHub yet, use:`,
+      title: "اضافه کردن Remote Origin",
+      desc: `اگر local repo تو هنوز به GitHub وصل نیست، از این استفاده کن:`,
       kind: "reaction",
       code: [
         {
-          label: "Connect your repo to GitHub:",
+          label: "وصل کردن repo به GitHub:",
           text: "git remote add origin https://github.com/user/repo.git",
         },
         {
-          label: "Push for the first time:",
+          label: "اولین push:",
           text: "git push -u origin main",
         },
       ],
@@ -132,9 +132,9 @@ Steps:
     },
     {
       title: "GitHub README.md",
-      desc: `A **README.md** file explains what your project is and how to use it.
+      desc: `یک فایل **README.md** توضیح می‌دهد پروژه‌ی تو چیست و چطور از آن استفاده کنی.
 
-Write it in **Markdown**, and GitHub will render it beautifully on your repo’s homepage.`,
+آن را با **Markdown** بنویس و GitHub آن را زیبا در صفحه‌ی اصلی repo تو رندر می‌کند.`,
       kind: "reaction",
       tags: [
         { text: "github" },
@@ -146,9 +146,9 @@ Write it in **Markdown**, and GitHub will render it beautifully on your repo’s
       style: "bg-[#7B9D7C]",
     },
     {
-      title: "Markdown: Headings",
+      title: "Markdown: عنوان‌ها",
       kind: "reaction",
-      desc: `Use \`#\` to create headings in README files.\n\nMarkdown supports 6 levels of headings:\n\n\`\`\`md\n# H1\n## H2\n### H3\n#### H4\n##### H5\n###### H6\n\`\`\`\n\n**Tip**: Use headings to organize content in your GitHub README.`,
+      desc: `برای ساخت عنوان در فایل‌های README از \`#\` استفاده کن.\n\nMarkdown از ۶ سطح عنوان پشتیبانی می‌کند:\n\n\`\`\`md\n# H1\n## H2\n### H3\n#### H4\n##### H5\n###### H6\n\`\`\`\n\n**نکته**: برای سازمان‌دهی محتوا در README گیت‌هاب از عنوان‌ها استفاده کن.`,
       tags: [
         { text: "markdown" },
         { text: "readme" },
@@ -158,9 +158,9 @@ Write it in **Markdown**, and GitHub will render it beautifully on your repo’s
       style: "bg-[#96D38C]",
     },
     {
-      title: "Markdown: Code Blocks",
+      title: "Markdown: بلاک‌های کد",
       kind: "reaction",
-      desc: `Use backticks to write code:\n\n- Inline: \`const x = 10;\`\n- Multi-line:\n\n\`\`\`js\nfunction greet() {\n  console.log("Hello!");\n}\n\`\`\`\n\nSupports many languages like \`js\`, \`bash\`, \`python\`, etc.`,
+      desc: `برای نوشتن کد از backtick استفاده کن:\n\n- Inline: \`const x = 10;\`\n- چندخطی:\n\n\`\`\`js\nfunction greet() {\n  console.log("Hello!");\n}\n\`\`\`\n\nاز زبان‌های زیادی مثل \`js\`، \`bash\`، \`python\` و غیره پشتیبانی می‌کند.`,
       tags: [
         { text: "markdown" },
         { text: "code" },
@@ -170,9 +170,9 @@ Write it in **Markdown**, and GitHub will render it beautifully on your repo’s
       style: "bg-[#FFD580]",
     },
     {
-      title: "Markdown: Links & Images",
+      title: "Markdown: لینک‌ها و تصاویر",
       kind: "reaction",
-      desc: `Create clickable links:\n\n\`[OpenAI](https://openai.com)\`\n\nEmbed images:\n\n\`![Alt text](image-url)\`\n\n**Tip**: Use relative paths for images inside the repo.`,
+      desc: `لینک‌های قابل کلیک بساز:\n\n\`[OpenAI](https://openai.com)\`\n\nتصویر جاسازی کن:\n\n\`![Alt text](image-url)\`\n\n**نکته**: برای تصاویر داخل repo از مسیرهای نسبی استفاده کن.`,
       tags: [
         { text: "markdown" },
         { text: "readme" },
@@ -182,9 +182,9 @@ Write it in **Markdown**, and GitHub will render it beautifully on your repo’s
       style: "bg-[#A2C2E2]",
     },
     {
-      title: "Markdown: Lists & Checkboxes",
+      title: "Markdown: لیست‌ها و چک‌باکس‌ها",
       kind: "reaction",
-      desc: `Unordered List:\n- Item A\n- Item B\n\nOrdered List:\n1. Step one\n2. Step two\n\nCheckboxes:\n- [x] Done\n- [ ] Not done\n\nGreat for task lists in PRs and issues.`,
+      desc: `لیست بدون ترتیب:\n- Item A\n- Item B\n\nلیست ترتیبی:\n1. Step one\n2. Step two\n\nچک‌باکس‌ها:\n- [x] Done\n- [ ] Not done\n\nبرای لیست وظایف در PRها و issueها عالی است.`,
       tags: [
         { text: "markdown" },
         { text: "readme" },

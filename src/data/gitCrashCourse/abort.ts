@@ -8,152 +8,152 @@ export const abort = {
   pageName: "abort",
   cards: [
     {
-      title: "Abort",
+      title: "لغو کردن",
       kind: "reaction",
-      desc: `Every long-running Git operation has an escape hatch. You are never trapped.`,
+      desc: `هر عملیات طولانی گیت یک راه فرار دارد. هیچ‌وقت گیر نمی‌کنی.`,
       tags,
       icon: "./assets/git.svg",
       imgUrl: "",
       style: "bg-candy-pink-strawberry",
     },
     {
-      title: "First: What State Am I In?",
+      title: "اول: در چه وضعیتی هستم؟",
       kind: "reaction",
-      desc: `Merge, rebase, cherry-pick and revert can all pause mid-flight and leave the repo in a special state. The prompt looks wrong, commands complain, nothing behaves.
+      desc: `مرج، rebase، cherry-pick و revert همه می‌توانند وسط کار مکث کنند و repo را در یک وضعیت خاص رها کنند. prompt عجیب به نظر می‌رسد، دستورها اعتراض می‌کنند، هیچ‌چیز درست رفتار نمی‌کند.
 
-\`git status\` names the state at the top and tells you the exact commands available. Read it before typing anything else — the right abort depends on which operation you are inside.`,
+\`git status\` وضعیت را در بالا نام می‌برد و دقیقاً می‌گوید چه دستورهایی در دسترس‌اند. پیش از تایپ هر چیز دیگری آن را بخوان — لغو درست به این بستگی دارد که داخل کدام عملیات هستی.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-blue-sky",
       code: [
-        { text: "git status", label: "What is going on:" },
-        { text: "git status --short --branch", label: "The compact version:" },
+        { text: "git status", label: "چه خبر است:" },
+        { text: "git status --short --branch", label: "نسخه‌ی فشرده:" },
       ],
     },
     {
-      title: "The Three Verbs",
+      title: "سه فعل",
       kind: "reaction",
-      desc: `Every pausable operation takes the same three flags:
+      desc: `هر عملیات قابل‌مکث همان سه flag را می‌گیرد:
 
-**--continue** — I fixed it, carry on.
+**--continue** — درستش کردم، ادامه بده.
 
-**--abort** — undo the whole operation, put me back where I started.
+**--abort** — کل عملیات را برگردان، برگردانم به جایی که شروع کردم.
 
-**--skip** — drop this one commit and move to the next (rebase and cherry-pick only).
+**--skip** — این یک commit را رد کن و برو سراغ بعدی (فقط rebase و cherry-pick).
 
-Learn the pattern once and it applies to all of them.`,
+الگو را یک بار یاد بگیر و برای همه‌شان به کار می‌رود.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-yellow",
       code: [
-        { text: "git rebase --continue", label: "Carry on:" },
-        { text: "git rebase --abort", label: "Back out:" },
-        { text: "git rebase --skip", label: "Drop the current commit:" },
+        { text: "git rebase --continue", label: "ادامه بده:" },
+        { text: "git rebase --abort", label: "برگرد عقب:" },
+        { text: "git rebase --skip", label: "commit فعلی را رد کن:" },
       ],
     },
     {
-      title: "Abort a Merge",
+      title: "لغو مرج",
       kind: "reaction",
-      desc: `Mid-conflict and you would rather not deal with it right now? \`--abort\` restores the working tree and index to exactly what they were before the merge started.
+      desc: `وسط کانفلیکت هستی و فعلاً حوصله‌ی سر و کله زدن با آن را نداری؟ \`--abort\` working tree و index را دقیقاً به همان حالتی برمی‌گرداند که پیش از شروع مرج بودند.
 
-It is safe **as long as your pre-merge changes were committed or stashed**. Uncommitted work you had lying around before the merge can be lost.`,
+تا وقتی امن است **که تغییرات پیش از مرج‌ات commit یا stash شده باشند**. کارهای commitنشده‌ای که پیش از مرج رها کرده بودی ممکن است گم شوند.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-teal",
       code: [
-        { text: "git merge --abort", label: "Undo the merge, restore everything:" },
-        { text: "git merge --quit", label: "Stop the merge but keep the working tree as-is:" },
+        { text: "git merge --abort", label: "مرج را برگردان، همه‌چیز را بازگردان:" },
+        { text: "git merge --quit", label: "مرج را متوقف کن ولی working tree را همان‌طور که هست نگه دار:" },
       ],
     },
     {
-      title: "Abort a Rebase",
+      title: "لغو rebase",
       kind: "reaction",
-      desc: `Rebase replays your commits one at a time, so it can stop repeatedly. \`--abort\` throws away every replayed commit and returns the branch to its original tip.
+      desc: `rebase کامیت‌هایت را یکی‌یکی دوباره پخش می‌کند، پس می‌تواند بارها متوقف شود. \`--abort\` همه‌ی کامیت‌های بازپخش‌شده را دور می‌اندازد و branch را به نوک اصلی‌اش برمی‌گرداند.
 
-This is the one people fear most, and it is completely reversible right up until you force-push.`,
+این همان چیزی است که مردم بیشتر از همه از آن می‌ترسند، و تا وقتی force-push نکرده‌ای کاملاً برگشت‌پذیر است.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-yellow-sharp",
       code: [
-        { text: "git rebase --abort", label: "Put the branch back how it was:" },
-        { text: "git rebase --skip", label: "Skip a commit that no longer applies:" },
-        { text: "git rebase --continue", label: "Resume after resolving:" },
+        { text: "git rebase --abort", label: "branch را به همان حالت اول برگردان:" },
+        { text: "git rebase --skip", label: "کامیتی را که دیگر به کار نمی‌آید رد کن:" },
+        { text: "git rebase --continue", label: "بعد از حل، ادامه بده:" },
       ],
     },
     {
-      title: "Abort Cherry-Pick & Revert",
+      title: "لغو cherry-pick و revert",
       kind: "reaction",
-      desc: `Same three verbs, same behaviour. A cherry-pick or revert that hits a conflict pauses and waits for you.`,
+      desc: `همان سه فعل، همان رفتار. یک cherry-pick یا revert که به کانفلیکت بخورد مکث می‌کند و منتظر می‌ماند.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-pink",
       code: [
-        { text: "git cherry-pick --abort", label: "Cancel the cherry-pick:" },
-        { text: "git revert --abort", label: "Cancel the revert:" },
-        { text: "git cherry-pick --continue", label: "Resume after resolving:" },
+        { text: "git cherry-pick --abort", label: "cherry-pick را لغو کن:" },
+        { text: "git revert --abort", label: "revert را لغو کن:" },
+        { text: "git cherry-pick --continue", label: "بعد از حل، ادامه بده:" },
       ],
     },
     {
-      title: "--abort vs --quit",
+      title: "--abort در برابر --quit",
       kind: "reaction",
-      desc: `**--abort** rewinds everything — the operation and its changes are gone, you are back at the start.
+      desc: `**--abort** همه‌چیز را به عقب برمی‌گرداند — عملیات و تغییرهایش رفته‌اند و تو برگشته‌ای به نقطه‌ی شروع.
 
-**--quit** just ends the operation and leaves the working tree exactly as it is now, half-resolved and all. Use it when you want to keep what you have already fixed but stop Git from managing the sequence.
+**--quit** فقط عملیات را تمام می‌کند و working tree را دقیقاً همان‌طور که الان هست رها می‌کند، نیمه‌حل‌شده و همه‌چیز. وقتی از آن استفاده کن که می‌خواهی چیزهایی را که تا حالا درست کرده‌ای نگه داری ولی دیگر نمی‌خواهی گیت ترتیب کارها را مدیریت کند.
 
-If you are unsure, you want \`--abort\`.`,
+اگر مطمئن نیستی، \`--abort\` همان چیزی است که می‌خواهی.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-milky",
       code: [
-        { text: "git merge --abort", label: "Rewind everything:" },
-        { text: "git rebase --quit", label: "Stop managing it, keep the current tree:" },
+        { text: "git merge --abort", label: "همه‌چیز را به عقب برگردان:" },
+        { text: "git rebase --quit", label: "مدیریتش را متوقف کن، درخت فعلی را نگه دار:" },
       ],
     },
     {
-      title: "Bail Out of an Editor",
+      title: "فرار از ادیتور",
       kind: "reaction",
-      desc: `Git dropped you into Vim for a commit or interactive rebase message and you want out.
+      desc: `گیت تو را برای یک پیام commit یا rebase تعاملی داخل Vim انداخته و می‌خواهی بیرون بیایی.
 
-Quitting **without saving** aborts the operation — Git treats an empty or unchanged message as "never mind". That is the safest escape when you are not sure what you are looking at.`,
+خارج شدن **بدون ذخیره** عملیات را لغو می‌کند — گیت یک پیام خالی یا تغییری نکرده را «بی‌خیال» می‌فهمد. وقتی مطمئن نیستی چه چیزی جلوی رویت است، این امن‌ترین راه فرار است.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-green-light",
       code: [
-        { text: ":q!", label: "Vim: quit without saving (aborts the operation):" },
-        { text: ":wq", label: "Vim: save and continue:" },
-        { text: "git config --global core.editor 'nano'", label: "Or stop using Vim entirely:" },
+        { text: ":q!", label: "Vim: بدون ذخیره خارج شو (عملیات لغو می‌شود):" },
+        { text: ":wq", label: "Vim: ذخیره کن و ادامه بده:" },
+        { text: "git config --global core.editor 'nano'", label: "یا کلاً از Vim استفاده نکن:" },
       ],
     },
     {
-      title: "ORIG_HEAD: The Panic Button",
+      title: "ORIG_HEAD: دکمه‌ی اضطراری",
       kind: "reaction",
-      desc: `Before any operation that moves your branch a long way — merge, rebase, reset — Git saves where you were in \`ORIG_HEAD\`.
+      desc: `پیش از هر عملیاتی که branch تو را خیلی جابه‌جا می‌کند — مرج، rebase، reset — گیت جایی را که بودی در \`ORIG_HEAD\` ذخیره می‌کند.
 
-If you aborted too late, or completed something you meant to cancel, this is the fastest way back. \`git reflog\` is the fuller version if \`ORIG_HEAD\` has already been overwritten.`,
+اگر دیر لغو کردی، یا چیزی را که می‌خواستی لغو کنی کامل کردی، این سریع‌ترین راه برگشت است. \`git reflog\` نسخه‌ی کامل‌تر است اگر \`ORIG_HEAD\` تا حالا بازنویسی شده باشد.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-green-M",
       code: [
-        { text: "git reset --hard ORIG_HEAD", label: "Back to where you were before the last big move:" },
-        { text: "git reflog", label: "The full history of HEAD, if that is not enough:" },
+        { text: "git reset --hard ORIG_HEAD", label: "برگرد به جایی که پیش از آخرین حرکت بزرگ بودی:" },
+        { text: "git reflog", label: "تاریخچه‌ی کامل HEAD، اگر آن کافی نبود:" },
       ],
     },
     {
-      title: "The Short Version",
+      title: "خلاصه‌اش",
       kind: "reaction",
-      desc: `**Lost?** → \`git status\`
+      desc: `**گم شدی؟** → \`git status\`
 
-**Mid-merge** → \`git merge --abort\`
+**وسط مرج** → \`git merge --abort\`
 
-**Mid-rebase** → \`git rebase --abort\`
+**وسط rebase** → \`git rebase --abort\`
 
-**Mid-cherry-pick or revert** → \`git cherry-pick --abort\` / \`git revert --abort\`
+**وسط cherry-pick یا revert** → \`git cherry-pick --abort\` / \`git revert --abort\`
 
-**Stuck in an editor** → \`:q!\`
+**گیر کرده‌ای در ادیتور** → \`:q!\`
 
-**Aborted too late** → \`git reset --hard ORIG_HEAD\`
+**دیر لغو کردی** → \`git reset --hard ORIG_HEAD\`
 
-Nothing here touches the remote. Until you push, every one of these is free.`,
+هیچ‌کدام از این‌ها به remote دست نمی‌زنند. تا وقتی push نکرده‌ای، همه‌شان بی‌هزینه‌اند.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-pink-strawberry",

@@ -2,7 +2,7 @@ export const committing = {
   pageName: "changes",
   cards: [
     {
-      title: "Conventional Commits",
+      title: "Commit های قراردادی",
       kind: "reaction",
       desc: "By Parsa Bordbar",
       tags: [
@@ -22,22 +22,22 @@ export const committing = {
     },
 
     {
-      title: "Structure",
+      title: "ساختار",
       kind: "reaction",
-      desc: ` In this section we are going to learn how commit proffesianaly and save you and others tons of time!
-        we have **header, body and footer for a single commit**, a good header follows this structure, note that **the scope** is optional.`,
+      desc: ` در این بخش یاد می‌گیریم چطور حرفه‌ای commit کنیم و برای خودت و دیگران کلی وقت ذخیره کنی!
+        هر commit یک **header و body و footer** دارد؛ یک header خوب از این ساختار پیروی می‌کند؛ توجه کن که **scope** اختیاری است.`,
       code: [
         {
           text: "<type>[scope]: <description>",
-          label: "Header of a good commit:",
+          label: "Header یک commit خوب:",
         },
         {
           text: "[optional body]",
-          label: "Body comes after the Header:",
+          label: "Body بعد از Header می‌آید:",
         },
         {
           text: "[optional footer]",
-          label: "and at the end comes the Footer:",
+          label: "و در آخر Footer می‌آید:",
         },
       ],
       tags: [
@@ -57,7 +57,7 @@ export const committing = {
     },
 
     {
-      title: "a. Example Of A Good Commit",
+      title: "الف. مثالی از یک Commit خوب",
       kind: "reaction",
       desc: `
     fix(cart): correct total price calculation
@@ -88,10 +88,10 @@ export const committing = {
     },
 
     {
-      title: "b. Example Of A Good Commit",
+      title: "ب. مثالی از یک Commit خوب",
       kind: "reaction",
-      desc: `Let's take a look at some more examples of good commit messages!
-        [click here!](https://github.com/torvalds/linux/commits/master/)
+      desc: `بیا چند مثال دیگر از پیام‌های commit خوب را ببینیم!
+        [اینجا کلیک کن!](https://github.com/torvalds/linux/commits/master/)
         `,
       tags: [
         {
@@ -110,10 +110,10 @@ export const committing = {
     },
 
     {
-      title: "Commit Hashes",
+      title: "هش‌های Commit",
       kind: "reaction",
-      desc: `By now you know about **commits** and how to commit (or do you?)
-        so what is a **Commit hash?** it's the unique identifier of a commit like:
+      desc: `تا حالا درباره‌ی **commit** ها و نحوه‌ی commit کردن می‌دانی (یا می‌دانی؟)
+        پس **هش commit** چیست؟ شناسه‌ی یکتای یک commit است، مثل:
         `,
       code: [
         {
@@ -137,17 +137,17 @@ export const committing = {
     },
 
     {
-      title: "Commit Types",
+      title: "نوع‌های Commit",
       kind: "reaction",
       desc: `
-  ● **fix**: Bug fixes (e.g., correcting a problem in the code).  
+  ● **fix**: رفع باگ (مثلاً اصلاح یک مشکل در کد).  
   
   &nbsp;  
   
-  ● **feat**: Adding a new feature (e.g., introducing new functionality to the project).  
+  ● **feat**: اضافه کردن یک قابلیت جدید (مثلاً معرفی یک عملکرد جدید به پروژه).  
   &nbsp;  
   
-  ● **build**: Changes related to project build or configuration (e.g., updating build scripts).  
+  ● **build**: تغییرات مربوط به build یا پیکربندی پروژه (مثلاً به‌روزرسانی اسکریپت‌های build).  
   
   &nbsp;  
   `,
@@ -168,19 +168,19 @@ export const committing = {
     },
 
     {
-      title: "Commit Types",
+      title: "نوع‌های Commit",
       kind: "reaction",
       desc: `
 
-  ● **chore**: Routine tasks that don’t affect the source code or tests (e.g., updating dependencies).  
+  ● **chore**: کارهای روتین که روی سورس‌کد یا تست‌ها اثر نمی‌گذارند (مثلاً به‌روزرسانی dependency ها).  
   
   &nbsp;  
 
-  ● **docs**: Documentation changes (e.g., updating README files or adding new documentation).  
+  ● **docs**: تغییرات مستندات (مثلاً به‌روزرسانی فایل‌های README یا اضافه کردن مستندات جدید).  
   
   &nbsp;  
   
-  ● **style**: Code formatting changes (e.g., fixing spacing, commas, or code style issues).  
+  ● **style**: تغییرات فرمت کد (مثلاً اصلاح فاصله‌ها، کاماها یا مشکلات سبک کد).  
   
   &nbsp;  
   
@@ -202,19 +202,19 @@ export const committing = {
     },
 
     {
-      title: "Commit Types",
+      title: "نوع‌های Commit",
       kind: "reaction",
       desc: `
 
-  ● **perf**: Changes that improve performance (e.g., optimizing code for speed).
+  ● **perf**: تغییراتی که عملکرد را بهتر می‌کنند (مثلاً بهینه‌سازی کد برای سرعت).
 
   &nbsp;  
 
-  ● **test**: Adding or updating tests (e.g., creating new unit tests or increasing test coverage).
+  ● **test**: اضافه کردن یا به‌روزرسانی تست‌ها (مثلاً ساخت تست‌های unit جدید یا افزایش پوشش تست).
 
   &nbsp;  
 
-  ● **refactor**: Code changes that improve structure without altering functionality (e.g., reorganizing code for clarity).
+  ● **refactor**: تغییرات کد که ساختار را بهتر می‌کنند بدون اینکه عملکرد عوض شود (مثلاً مرتب کردن کد برای خوانایی).
 
 
   `,
@@ -238,13 +238,13 @@ export const committing = {
       icon: "./assets/git.svg",
       style: "bg-candy-pink",
       kind: "reaction",
-      desc: "In the footer you can have different optional comments that we'll go through.",
+      desc: "در Footer می‌توانی کامنت‌های اختیاری مختلفی داشته باشی که آن‌ها را مرور می‌کنیم.",
     },
     {
       title: "Refs",
       icon: "./assets/git.svg",
       style: "bg-candy-blue",
-      desc: `We can reference **Issues** & certain commits using **#**.`,
+      desc: `می‌توانیم با **#** به **Issue** ها و commit های مشخص ارجاع بدهیم.`,
       code: [
         {
           text: `fix(cart): fix total price calculation.
@@ -253,16 +253,16 @@ export const committing = {
             &nbsp;  
             Refs #234: Solves the problem reported in issue #234.
           `,
-          label: "Example:",
+          label: "مثال:",
         },
       ],
       kind: "reaction",
     },
     {
-      title: "Co Authored",
+      title: "Co-authored",
       icon: "./assets/git.svg",
       style: "bg-candy-yellow-sharp",
-      desc: `**Co-authored-by**: If multiple people contributed to the commit, their contributions are acknowledged here in the footer.`,
+      desc: `**Co-authored-by**: اگر چند نفر در commit مشارکت کرده باشند، مشارکت آن‌ها اینجا در footer ذکر می‌شود.`,
       code: [
         {
           text: `feat(search): add filters
@@ -271,7 +271,7 @@ export const committing = {
             Added filters to search results.
             Co-authored-by: John Doe <john.doe@example.com>
           `,
-          label: "Example:",
+          label: "مثال:",
         },
       ],
       kind: "reaction",
@@ -280,7 +280,7 @@ export const committing = {
       title: "Refs",
       icon: "./assets/git.svg",
       style: "bg-candy-blue-sky",
-      desc: `We can reference **Issues** & certain commits using **#**.`,
+      desc: `می‌توانیم با **#** به **Issue** ها و commit های مشخص ارجاع بدهیم.`,
       code: [
         {
           text: `fix(cart): fix total price calculation.
@@ -289,7 +289,7 @@ export const committing = {
             &nbsp;  
             Refs #234: Solves the problem reported in issue #234.
           `,
-          label: "Example:",
+          label: "مثال:",
         },
       ],
       kind: "reaction",

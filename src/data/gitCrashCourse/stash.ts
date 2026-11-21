@@ -10,139 +10,139 @@ export const stash = {
     {
       title: "Stash",
       kind: "reaction",
-      desc: `A shelf for work that is not ready to be a commit.`,
+      desc: `یک قفسه برای کاری که هنوز آماده‌ی commit شدن نیست.`,
       tags,
       icon: "./assets/git.svg",
       imgUrl: "",
       style: "bg-candy-milky",
     },
     {
-      title: "What Stash Is For",
+      title: "Stash برای چیست",
       kind: "reaction",
-      desc: `You are halfway through something. A bug comes in, or you need to switch branches, and Git refuses because you would lose your changes.
+      desc: `وسط یک کاری هستی. یک باگ می‌رسد، یا باید branch عوض کنی، و Git قبول نمی‌کند چون تغییراتت را از دست می‌دهی.
 
-Stash takes everything uncommitted, stores it away, and hands you a clean working tree. Your work is safe and your branch looks untouched.
+Stash همه‌ی تغییرات commitنشده را می‌گیرد، کنار می‌گذارد و یک working tree تمیز به تو تحویل می‌دهد. کارت امن است و branch تو دست‌نخورده به نظر می‌رسد.
 
-It is a **stack** — the newest stash sits on top.`,
+Stash یک **stack** است — جدیدترین stash بالاست.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-blue-sky",
       code: [
-        { text: "git stash", label: "Park everything, get a clean tree:" },
-        { text: "git stash push -m 'wip: half-done login form'", label: "Park it with a label you'll recognise:" },
+        { text: "git stash", label: "همه‌چیز را پارک کن، یک tree تمیز بگیر:" },
+        { text: "git stash push -m 'wip: half-done login form'", label: "با یک برچسب پارکش کن که بعداً بشناسیش:" },
       ],
     },
     {
-      title: "Untracked Files Are Skipped",
+      title: "فایل‌های Untracked نادیده گرفته می‌شوند",
       kind: "reaction",
-      desc: `The default \`git stash\` only takes **tracked** files. Brand new files Git has never seen stay in your working directory — which surprises people, because it looks like the stash silently ignored them.
+      desc: `دستور پیش‌فرض \`git stash\` فقط فایل‌های **tracked** را می‌گیرد. فایل‌های کاملاً جدیدی که Git تا حالا ندیده در working directory می‌مانند — و این خیلی‌ها را غافلگیر می‌کند، چون به نظر می‌رسد stash بی‌صدا آن‌ها را نادیده گرفته.
 
-\`-u\` includes untracked files. \`-a\` also includes ignored ones, which you almost never want.`,
+\`-u\` فایل‌های untracked را هم شامل می‌شود. \`-a\` فایل‌های ignored را هم شامل می‌شود، که تقریباً هیچ‌وقت نمی‌خواهی.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-yellow",
       code: [
-        { text: "git stash -u", label: "Include new, untracked files:" },
-        { text: "git stash -a", label: "Include ignored files too (rarely what you want):" },
-        { text: "git stash --staged", label: "Stash only what is currently staged:" },
+        { text: "git stash -u", label: "فایل‌های جدید و untracked را هم شامل کن:" },
+        { text: "git stash -a", label: "فایل‌های ignored را هم شامل کن (به‌ندرت چیزی است که بخواهی):" },
+        { text: "git stash --staged", label: "فقط چیزی را stash کن که الان staged است:" },
       ],
     },
     {
-      title: "See What You Parked",
+      title: "ببین چه چیزی پارک کرده‌ای",
       kind: "reaction",
-      desc: `Stashes are named \`stash@{0}\`, \`stash@{1}\` and so on — \`{0}\` is always the most recent.
+      desc: `Stashها \`stash@{0}\`، \`stash@{1}\` و همین‌طور نام‌گذاری می‌شوند — \`{0}\` همیشه جدیدترین است.
 
-This is why labelling matters. Three unlabelled stashes from last week are three mysteries.`,
+به همین دلیل برچسب زدن مهم است. سه stash بدون برچسب از هفته‌ی پیش، سه معما هستند.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-teal",
       code: [
-        { text: "git stash list", label: "List every stash:" },
-        { text: "git stash show stash@{0}", label: "Summary of what's in one:" },
-        { text: "git stash show -p stash@{0}", label: "The full diff:" },
+        { text: "git stash list", label: "همه‌ی stashها را لیست کن:" },
+        { text: "git stash show stash@{0}", label: "خلاصه‌ی محتوای یکی:" },
+        { text: "git stash show -p stash@{0}", label: "diff کامل:" },
       ],
     },
     {
-      title: "pop vs apply",
+      title: "pop در برابر apply",
       kind: "reaction",
-      desc: `**pop** restores the stash and **deletes** it from the stack.
+      desc: `**pop** stash را برمی‌گرداند و آن را از stack **حذف** می‌کند.
 
-**apply** restores it and **keeps** it, so you can put the same changes onto more than one branch — or retry if the first attempt goes badly.
+**apply** آن را برمی‌گرداند و **نگه** می‌دارد، پس می‌توانی همان تغییرات را روی بیش از یک branch بگذاری — یا اگر تلاش اول بد پیش رفت دوباره امتحان کنی.
 
-When you are not certain the changes will apply cleanly, use \`apply\`. You can always drop it afterwards.`,
+وقتی مطمئن نیستی تغییرات تمیز اعمال می‌شوند، از \`apply\` استفاده کن. بعداً همیشه می‌توانی آن را drop کنی.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-yellow-sharp",
       code: [
-        { text: "git stash pop", label: "Restore the newest and remove it:" },
-        { text: "git stash apply", label: "Restore the newest, keep it stashed:" },
-        { text: "git stash apply stash@{2}", label: "Restore a specific one:" },
+        { text: "git stash pop", label: "جدیدترین را برگردان و حذفش کن:" },
+        { text: "git stash apply", label: "جدیدترین را برگردان، stash را نگه دار:" },
+        { text: "git stash apply stash@{2}", label: "یک مورد خاص را برگردان:" },
       ],
     },
     {
-      title: "Stash Onto a New Branch",
+      title: "Stash روی یک Branch جدید",
       kind: "reaction",
-      desc: `Stashed on \`main\`, then realised the work deserves its own branch? \`git stash branch\` creates the branch **from the commit the stash was made on**, applies the stash there, and drops it.
+      desc: `روی \`main\` stash کردی، بعد فهمیدی کار لایق branch خودش است؟ \`git stash branch\` branch را **از commitای می‌سازد که stash روی آن ساخته شده**، stash را آنجا اعمال می‌کند و drop می‌کند.
 
-It also sidesteps conflicts: because it starts from the original commit, the changes always apply cleanly.`,
+از conflict هم جلوگیری می‌کند: چون از commit اصلی شروع می‌کند، تغییرات همیشه تمیز اعمال می‌شوند.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-green-light",
       code: [
-        { text: "git stash branch feature/login", label: "New branch from the newest stash:" },
-        { text: "git stash branch feature/login stash@{1}", label: "From a specific stash:" },
+        { text: "git stash branch feature/login", label: "یک branch جدید از جدیدترین stash:" },
+        { text: "git stash branch feature/login stash@{1}", label: "از یک stash خاص:" },
       ],
     },
     {
-      title: "Stash Part of Your Work",
+      title: "بخشی از کارت را Stash کن",
       kind: "reaction",
-      desc: `\`-p\` walks you through your changes hunk by hunk and asks what to stash. Useful when one file holds both the fix you want to keep and the debugging noise you do not.
+      desc: `\`-p\` تغییراتت را hunk به hunk جلو می‌برد و می‌پرسد چه چیزی stash شود. وقتی یک فایل هم اصلاحی را دارد که می‌خواهی نگه داری و هم نویز دیباگ را که نمی‌خواهی، مفید است.
 
-Answer **y** to stash a hunk, **n** to keep it in your tree, **s** to split it smaller, **q** to stop.`,
+برای stash کردن یک hunk **y**، برای نگه داشتن آن در tree **n**، برای کوچک‌تر تقسیم کردنش **s** و برای توقف **q** جواب بده.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-pink",
       code: [
-        { text: "git stash -p", label: "Choose what gets stashed:" },
-        { text: "git stash push -m 'debug logs' -- src/App.tsx", label: "Stash only certain paths:" },
+        { text: "git stash -p", label: "انتخاب کن چه چیزی stash شود:" },
+        { text: "git stash push -m 'debug logs' -- src/App.tsx", label: "فقط مسیرهای خاص را stash کن:" },
       ],
     },
     {
-      title: "When a Stash Conflicts",
+      title: "وقتی یک Stash دچار Conflict می‌شود",
       kind: "reaction",
-      desc: `If the branch moved on while your work sat on the shelf, restoring it can conflict. Resolve it like any other conflict.
+      desc: `اگر branch در مدت نشستن کارت روی قفسه جلو رفته باشد، برگرداندن آن می‌تواند conflict ایجاد کند. مثل هر conflict دیگری حلش کن.
 
-One trap: after a conflicted \`pop\`, the stash is **not** dropped. That is deliberate — your safety net stays until you say otherwise. Drop it once you are happy.`,
+یک دام: بعد از یک \`pop\` همراه با conflict، stash **حذف** نمی‌شود. این عمدی است — تور امن تو می‌ماند تا خودت بگویی. وقتی راضی شدی dropش کن.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-pink-strawberry",
       code: [
-        { text: "git status", label: "See the conflicted files:" },
-        { text: "git add <file>", label: "Mark each one resolved:" },
-        { text: "git stash drop", label: "Then remove the stash you just recovered:" },
+        { text: "git status", label: "فایل‌های conflictدار را ببین:" },
+        { text: "git add <file>", label: "هر کدام را به‌عنوان حل‌شده علامت بزن:" },
+        { text: "git stash drop", label: "بعد stashای را که تازه بازیابی کردی حذف کن:" },
       ],
     },
     {
-      title: "Cleaning Up",
+      title: "تمیزکاری",
       kind: "reaction",
-      desc: `Stashes have no expiry and never show up in \`git log\`, so they quietly pile up for months.
+      desc: `Stashها تاریخ انقضا ندارند و هیچ‌وقت در \`git log\` دیده نمی‌شوند، پس بی‌صدا ماه‌ها روی هم تلنبار می‌شوند.
 
-\`clear\` is not undoable through normal means — dropped stashes are unreachable and \`git fsck\` is your only recourse. Check \`git stash list\` first.`,
+\`clear\` با روش‌های معمولی قابل برگشت نیست — stashهای dropشده غیرقابل دسترس‌اند و \`git fsck\` تنها راه چاره‌ی توست. اول \`git stash list\` را چک کن.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-green-M",
       code: [
-        { text: "git stash drop stash@{1}", label: "Remove one:" },
-        { text: "git stash clear", label: "Remove all of them (careful):" },
-        { text: "git fsck --unreachable | grep commit", label: "Last resort after a bad clear:" },
+        { text: "git stash drop stash@{1}", label: "یکی را حذف کن:" },
+        { text: "git stash clear", label: "همه را حذف کن (مواظب باش):" },
+        { text: "git fsck --unreachable | grep commit", label: "آخرین راه‌حل بعد از یک clear بد:" },
       ],
     },
     {
-      title: "Stash Isn't a Filing Cabinet",
+      title: "Stash یک کمد بایگانی نیست",
       kind: "reaction",
-      desc: `Stash is for **minutes to hours**, not weeks. It is invisible in the log, it is not pushed to the remote, and it does not survive a fresh clone.
+      desc: `Stash برای **چند دقیقه تا چند ساعت** است، نه چند هفته. در log دیده نمی‌شود، به remote push نمی‌شود و با یک clone تازه دوام نمی‌آورد.
 
-If work needs to live longer than an afternoon, it wants a branch and a commit — even a scruffy \`wip:\` one. You can always tidy the history later.`,
+اگر کاری باید بیشتر از یک بعدازظهر زنده بماند، یک branch و یک commit می‌خواهد — حتی یک commit شلخته‌ی \`wip:\` — همیشه می‌توانی تاریخچه را بعداً مرتب کنی.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-milky",

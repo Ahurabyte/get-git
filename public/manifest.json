@@ -1,8 +1,8 @@
 {
   "id": "/get-git/",
-  "name": "Get Git",
-  "short_name": "getGit",
-  "description": "Learn Git & Github!",
+  "name": "گت‌گیت — یادگیری گیت با فلش‌کارت",
+  "short_name": "گت‌گیت",
+  "description": "گیت و گیت‌هاب را با فلش‌کارت یاد بگیر!",
   "start_url": "/get-git/",
   "scope": "/get-git/",
   "display": "standalone",

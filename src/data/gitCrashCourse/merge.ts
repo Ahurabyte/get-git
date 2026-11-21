@@ -8,140 +8,140 @@ export const merge = {
   pageName: "merge",
   cards: [
     {
-      title: "Merge",
+      title: "مرج",
       kind: "reaction",
-      desc: `You branched off, you did the work. Now bring it home.`,
+      desc: `از branch جدا شدی، کارت را انجام دادی. حالا برگردانش سر جایش.`,
       tags,
       icon: "./assets/git.svg",
       imgUrl: "",
       style: "bg-candy-green-light",
     },
     {
-      title: "Merge Goes One Way",
+      title: "مرج فقط یک‌طرفه است",
       kind: "reaction",
-      desc: `Merging is not symmetric. You **check out the branch that should receive the work**, then merge the other one into it.
+      desc: `مرج متقارن نیست. اول **checkout می‌کنی به branchای که باید کار را بگیرد**، بعد branch دیگر را داخل آن merge می‌کنی.
 
-To get \`feature\` into \`main\`, you stand on \`main\`. Getting this backwards is the single most common merge mistake.`,
+برای اینکه \`feature\` به \`main\` برسد، باید روی \`main\` بایستی. برعکس گرفتن این ترتیب، رایج‌ترین اشتباه در مرج است.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-blue-sky",
       code: [
-        { text: "git switch main", label: "1. Stand where the work should land:" },
-        { text: "git merge feature", label: "2. Pull the other branch in:" },
+        { text: "git switch main", label: "1. بایست جایی که کار باید برسد:" },
+        { text: "git merge feature", label: "2. branch دیگر را به داخل بکش:" },
       ],
     },
     {
       title: "Fast-Forward",
       kind: "reaction",
-      desc: `If \`main\` has not moved since you branched, there is nothing to reconcile. Git just slides the \`main\` label forward onto your commits.
+      desc: `اگر \`main\` از وقتی که branch گرفتی تکان نخورده باشد، چیزی برای آشتی دادن نیست. گیت فقط برچسب \`main\` را جلو می‌کشد روی کامیت‌های تو.
 
-No merge commit is created. The history stays a straight line — which is tidy, but it also erases the fact that a branch ever existed.`,
+هیچ merge commitای ساخته نمی‌شود. تاریخچه یک خط راست می‌ماند — مرتب است، ولی این واقعیت که اصلاً branchای وجود داشته هم پاک می‌شود.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-yellow",
       code: [
-        { text: "git merge feature", label: "Fast-forward when possible:" },
-        { text: "git merge --ff-only feature", label: "Refuse to merge unless it fast-forwards:" },
+        { text: "git merge feature", label: "Fast-forward وقتی ممکن است:" },
+        { text: "git merge --ff-only feature", label: "مرج را رد کن مگر اینکه fast-forward شود:" },
       ],
     },
     {
-      title: "Three-Way Merge",
+      title: "مرج سه‌طرفه",
       kind: "reaction",
-      desc: `If **both** branches have new commits, Git cannot slide a label. It looks at three points — your branch tip, their branch tip, and the last commit they shared — and builds a **merge commit** with two parents.
+      desc: `اگر **هر دو** branch کامیت تازه داشته باشند، گیت نمی‌تواند برچسب را جلو بکشد. به سه نقطه نگاه می‌کند — نوک branch تو، نوک branch آن‌ها، و آخرین commit مشترکی که داشتند — و یک **merge commit** با دو parent می‌سازد.
 
-This is the normal case on a team, and it is where conflicts can appear.`,
+این حالت عادی در کار تیمی است، و همین‌جاست که کانفلیکت‌ها می‌توانند ظاهر شوند.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-teal",
       code: [
-        { text: "git merge feature", label: "Merge with a merge commit:" },
-        { text: "git merge -m 'merge: feature into main' feature", label: "Set the merge message yourself:" },
+        { text: "git merge feature", label: "مرج کردن با یک merge commit:" },
+        { text: "git merge -m 'merge: feature into main' feature", label: "پیام مرج را خودت تعیین کن:" },
       ],
     },
     {
-      title: "--no-ff: Keep the Story",
+      title: "--no-ff: نگه داشتن داستان",
       kind: "reaction",
-      desc: `\`--no-ff\` forces a merge commit even when a fast-forward was possible.
+      desc: `\`--no-ff\` حتی وقتی fast-forward ممکن بود، یک merge commit را اجباری می‌کند.
 
-Worth it when a branch represents one unit of work — a feature, a fix, a release. The merge commit is a bookmark saying *this is where that work landed*, and it lets you revert the whole branch as one thing later.`,
+وقتی یک branch نماینده‌ی یک واحد کار است ارزشش را دارد — یک feature، یک fix، یک release. آن merge commit یک نشانک است که می‌گوید *اینجا جایی است که آن کار فرود آمد*، و بعداً می‌توانی کل branch را یکجا revert کنی.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-yellow-sharp",
       code: [
-        { text: "git merge --no-ff feature", label: "Always make a merge commit:" },
-        { text: "git revert -m 1 <merge-commit>", label: "Later: undo the whole merged branch:" },
+        { text: "git merge --no-ff feature", label: "همیشه یک merge commit بساز:" },
+        { text: "git revert -m 1 <merge-commit>", label: "بعداً: کل branch مرج‌شده را برگردان:" },
       ],
     },
     {
-      title: "--squash: One Clean Commit",
+      title: "--squash: یک کامیت تمیز",
       kind: "reaction",
-      desc: `\`--squash\` takes everything the branch did and stages it as **one** set of changes. No merge commit, no branch history — just the end result, waiting for you to commit it.
+      desc: `\`--squash\` همه‌ی کاری که branch کرده را می‌گیرد و به‌عنوان **یک** دسته تغییر stage می‌کند. نه merge commit، نه تاریخچه‌ی branch — فقط نتیجه‌ی نهایی، که منتظر است تو commitاش کنی.
 
-Good for a branch full of "wip", "fix typo", "actually fix typo". Note Git does **not** commit for you, and does not record the merge, so the branch will still look unmerged.`,
+برای branchای پر از "wip" و "fix typo" و "actually fix typo" خوب است. توجه کن که گیت **به‌جای تو commit نمی‌کند** و مرج را هم ثبت نمی‌کند، پس branch هنوز مرج‌نشده به نظر می‌رسد.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-pink",
       code: [
-        { text: "git merge --squash feature", label: "1. Flatten the branch into the staging area:" },
-        { text: "git commit -m 'feat: add login flow'", label: "2. Commit it as one change:" },
+        { text: "git merge --squash feature", label: "1. branch را به‌صورت تخت در staging area بریز:" },
+        { text: "git commit -m 'feat: add login flow'", label: "2. آن را به‌عنوان یک تغییر commit کن:" },
       ],
     },
     {
-      title: "Look Before You Merge",
+      title: "پیش از مرج، نگاهی بینداز",
       kind: "reaction",
-      desc: `You can see what a merge would bring in before committing to it.
+      desc: `می‌توانی ببینی مرج چه چیزی را وارد می‌کند، پیش از اینکه به آن متعهد شوی.
 
-\`--no-commit --no-ff\` performs the merge but stops before creating the commit, so you can inspect it — and \`git merge --abort\` still backs you out cleanly.`,
+\`--no-commit --no-ff\` مرج را انجام می‌دهد ولی پیش از ساختن commit متوقف می‌شود، تا بتوانی بازرسی‌اش کنی — و \`git merge --abort\` هنوز تو را تمیز برمی‌گرداند.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-milky",
       code: [
-        { text: "git log main..feature --oneline", label: "What commits would come in:" },
-        { text: "git diff main...feature", label: "What the change actually looks like:" },
-        { text: "git merge --no-commit --no-ff feature", label: "Merge but stop before committing:" },
+        { text: "git log main..feature --oneline", label: "چه commitهایی وارد می‌شوند:" },
+        { text: "git diff main...feature", label: "تغییر واقعاً چه شکلی است:" },
+        { text: "git merge --no-commit --no-ff feature", label: "مرج کن ولی پیش از commit متوقف شو:" },
       ],
     },
     {
-      title: "When It Conflicts",
+      title: "وقتی کانفلیکت پیش می‌آید",
       kind: "reaction",
-      desc: `A conflict is not an error. Git is telling you two branches changed the same lines and it will not guess which one wins.
+      desc: `کانفلیکت خطا نیست. گیت دارد می‌گوید دو branch خط‌های یکسانی را عوض کرده‌اند و او حدس نمی‌زند کدام برنده است.
 
-Nothing is lost, and you are never stuck: \`git merge --abort\` puts everything back exactly as it was.`,
+هیچ چیزی گم نمی‌شود و هیچ‌وقت گیر نمی‌کنی: \`git merge --abort\` همه‌چیز را دقیقاً مثل قبل برمی‌گرداند.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-pink-strawberry",
       code: [
-        { text: "git status", label: "See which files are conflicted:" },
-        { text: "git add <file>", label: "Mark a file as resolved:" },
-        { text: "git merge --continue", label: "Finish the merge:" },
-        { text: "git merge --abort", label: "Or back out entirely:" },
+        { text: "git status", label: "ببین کدام فایل‌ها کانفلیکت دارند:" },
+        { text: "git add <file>", label: "یک فایل را به‌عنوان حل‌شده علامت بزن:" },
+        { text: "git merge --continue", label: "مرج را تمام کن:" },
+        { text: "git merge --abort", label: "یا کاملاً برگرد عقب:" },
       ],
     },
     {
-      title: "After the Merge",
+      title: "بعد از مرج",
       kind: "reaction",
-      desc: `Once the work has landed, the branch label has done its job. Deleting it removes the name, never the commits.
+      desc: `وقتی کار فرود آمد، برچسب branch کارش را کرده است. حذف کردنش فقط اسم را پاک می‌کند، نه کامیت‌ها را.
 
-\`--merged\` lists branches that are fully contained in your current branch — those are the safe ones to delete.`,
+\`--merged\` برنچ‌هایی را فهرست می‌کند که کاملاً داخل branch فعلی‌ات جا شده‌اند — آن‌ها همان‌هایی هستند که حذفشان امن است.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-blue-sky",
       code: [
-        { text: "git branch --merged", label: "Which branches are fully merged:" },
-        { text: "git branch -d feature", label: "Delete a merged branch (refuses if not merged):" },
-        { text: "git push origin --delete feature", label: "Delete it on the remote too:" },
+        { text: "git branch --merged", label: "کدام برنچ‌ها کاملاً مرج شده‌اند:" },
+        { text: "git branch -d feature", label: "یک branch مرج‌شده را حذف کن (اگر مرج نشده باشد رد می‌کند):" },
+        { text: "git push origin --delete feature", label: "آن را روی remote هم حذف کن:" },
       ],
     },
     {
-      title: "Seeing the Shape",
+      title: "دیدن شکل تاریخچه",
       kind: "reaction",
-      desc: `Merge history is a graph, not a list. \`--graph\` draws it, and it is the fastest way to understand what actually happened to a repo.`,
+      desc: `تاریخچه‌ی مرج یک گراف است، نه یک فهرست. \`--graph\` آن را می‌کشد، و سریع‌ترین راه برای فهمیدن این است که واقعاً برای repo چه اتفاقی افتاده.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-green-M",
       code: [
-        { text: "git log --graph --oneline --all", label: "Draw the branch graph:" },
-        { text: "git log --merges --oneline", label: "Show only merge commits:" },
+        { text: "git log --graph --oneline --all", label: "گراف برنچ‌ها را بکش:" },
+        { text: "git log --merges --oneline", label: "فقط merge commitها را نشان بده:" },
       ],
     },
   ],

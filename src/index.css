@@ -11,7 +11,7 @@
 }
 
 :root {
-  font-family: rubik, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Vazirmatn Variable", rubik, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -56,8 +56,8 @@ a:hover {
 
 @theme {
   --color-stone-850: #0f172a;
-  --font-display: poppins, system-ui, sans-serif;
-  --font-body: rubik, system-ui, sans-serif;
+  --font-display: "Vazirmatn Variable", poppins, system-ui, sans-serif;
+  --font-body: "Vazirmatn Variable", rubik, system-ui, sans-serif;
 }
 
 @theme {

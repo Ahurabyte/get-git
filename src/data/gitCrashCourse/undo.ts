@@ -8,204 +8,204 @@ export const undo = {
   pageName: "undo",
   cards: [
     {
-      title: "Undo & Recovery",
+      title: "Undo و Recovery",
       kind: "reaction",
-      desc: `You broke something. Git almost certainly still has it.`,
+      desc: `چیزی را خراب کردی. Git تقریباً حتماً هنوز آن را دارد.`,
       tags,
       icon: "./assets/git.svg",
       imgUrl: "",
       style: "bg-candy-red",
     },
     {
-      title: "Where Did It Go?",
+      title: "کجا رفت؟",
       kind: "reaction",
-      desc: `Before undoing anything, work out **which stage** the change is sitting in — the fix is different for each.
+      desc: `قبل از برگرداندن چیزی، مشخص کن تغییر در **کدام مرحله** نشسته — راه‌حل برای هر کدام فرق می‌کند.
 
-**Working directory** — edited, never staged.
+**Working directory** — ویرایش شده، هیچ‌وقت stage نشده.
 
-**Staging area** — you ran \`git add\`, but not \`git commit\`.
+**Staging area** — دستور \`git add\` را زدی، ولی \`git commit\` را نه.
 
-**Committed** — it is in your local history.
+**Committed** — در تاریخچه‌ی local توست.
 
-**Pushed** — it is on the remote, and other people may have it.
+**Pushed** — روی remote است و ممکن است دیگران هم آن را داشته باشند.
 
-\`git status\` tells you which. Read it first, every time.`,
+\`git status\` به تو می‌گوید کدام است. هر بار اول آن را بخوان.`,
       tags,
       icon: "./assets/git.svg",
       imgUrl: "./assets/stages.png",
       style: "bg-candy-blue-sky",
     },
     {
-      title: "Unstage a File",
+      title: "Unstage کردن یک فایل",
       kind: "reaction",
-      desc: `Added something by accident? Take it back out of the staging area. Your edits are **not** touched — the file just stops being staged.`,
+      desc: `چیزی را اشتباهی اضافه کردی؟ آن را از staging area بیرون بکش. ویرایش‌های تو **دست نمی‌خورند** — فایل فقط دیگر staged نیست.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-yellow",
       code: [
-        { text: "git restore --staged <file>", label: "Unstage one file:" },
-        { text: "git restore --staged .", label: "Unstage everything:" },
+        { text: "git restore --staged <file>", label: "یک فایل را unstage کن:" },
+        { text: "git restore --staged .", label: "همه‌چیز را unstage کن:" },
       ],
     },
     {
-      title: "Throw Away Local Edits",
+      title: "دور انداختن ویرایش‌های Local",
       kind: "reaction",
-      desc: `This one **destroys work**. Uncommitted changes are the only thing Git cannot get back for you — there is no commit to recover from.
+      desc: `این یکی **کار را نابود می‌کند**. تغییرات commitنشده تنها چیزی است که Git نمی‌تواند برای تو برگرداند — هیچ commitای نیست که از آن بازیابی کنی.
 
-If you are not sure, \`git stash\` instead. It is the same undo, but reversible.`,
+اگر مطمئن نیستی، به‌جای آن \`git stash\` کن. همان undo است، ولی برگشت‌پذیر.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-pink-strawberry",
       code: [
-        { text: "git restore <file>", label: "Discard changes to one file:" },
-        { text: "git restore .", label: "Discard everything (careful):" },
-        { text: "git stash", label: "Safer: park it instead of deleting it:" },
+        { text: "git restore <file>", label: "تغییرات یک فایل را دور بریز:" },
+        { text: "git restore .", label: "همه‌چیز را دور بریز (مواظب باش):" },
+        { text: "git stash", label: "امن‌تر: به‌جای حذف کردن، پارکش کن:" },
       ],
     },
     {
-      title: "Amend the Last Commit",
+      title: "Amend کردن آخرین Commit",
       kind: "reaction",
-      desc: `Forgot a file, or typo'd the message? \`--amend\` replaces the last commit instead of stacking a new one on top.
+      desc: `یک فایل را فراموش کردی، یا در پیام تایپی داشتی؟ \`--amend\` به‌جای اینکه یک commit جدید روی آن بگذارد، آخرین commit را جایگزین می‌کند.
 
-It **rewrites history**, so only amend commits you have not pushed yet.`,
+تاریخچه را **بازنویسی** می‌کند، پس فقط commitهایی را amend کن که هنوز push نکرده‌ای.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-teal",
       code: [
-        { text: "git commit --amend", label: "Fix the message:" },
+        { text: "git commit --amend", label: "پیام را اصلاح کن:" },
         {
           text: "git add <file> && git commit --amend --no-edit",
-          label: "Add a forgotten file, keep the message:",
+          label: "یک فایل فراموش‌شده اضافه کن، پیام را نگه دار:",
         },
       ],
     },
     {
-      title: "The Three Resets",
+      title: "سه Reset",
       kind: "reaction",
-      desc: `\`git reset\` moves the branch pointer backwards. What happens to your **files** depends on the flag:
+      desc: `\`git reset\` اشاره‌گر branch را به عقب می‌برد. اینکه برای **فایل‌هایت** چه اتفاقی می‌افتد به flag بستگی دارد:
 
-**--soft** — commit undone, changes stay **staged**. Use this to re-commit differently.
+**--soft** — commit برگردانده می‌شود، تغییرات **staged** می‌مانند. برای اینکه دوباره متفاوت commit کنی از این استفاده کن.
 
-**--mixed** (the default) — commit undone, changes stay in your working directory, unstaged.
+**--mixed** (پیش‌فرض) — commit برگردانده می‌شود، تغییرات در working directory می‌مانند، unstaged.
 
-**--hard** — commit undone and your files are **overwritten**. This is the one that loses work.`,
+**--hard** — commit برگردانده می‌شود و فایل‌هایت **بازنویسی** می‌شوند. این همان است که کار را از دست می‌دهد.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-yellow-sharp",
       code: [
-        { text: "git reset --soft HEAD~1", label: "Undo commit, keep it staged:" },
-        { text: "git reset --mixed HEAD~1", label: "Undo commit, keep the files:" },
-        { text: "git reset --hard HEAD~1", label: "Undo commit and the changes:" },
+        { text: "git reset --soft HEAD~1", label: "commit را برگردان، staged نگهش دار:" },
+        { text: "git reset --mixed HEAD~1", label: "commit را برگردان، فایل‌ها را نگه دار:" },
+        { text: "git reset --hard HEAD~1", label: "commit و تغییرات را برگردان:" },
       ],
     },
     {
-      title: "Revert: Undo in Public",
+      title: "Revert: برگرداندن در تاریخچه‌ی مشترک",
       kind: "reaction",
-      desc: `Once a commit is **pushed**, do not \`reset\` it — you would be rewriting history other people already pulled.
+      desc: `وقتی یک commit **push** شده، آن را \`reset\` نکن — تاریخچه‌ای را بازنویسی می‌کنی که دیگران قبلاً pull کرده‌اند.
 
-\`git revert\` instead creates a **new commit** that undoes the old one. History stays intact and everyone stays in sync.
+\`git revert\` به‌جای آن یک **commit جدید** می‌سازد که commit قدیمی را خنثی می‌کند. تاریخچه دست‌نخورده می‌ماند و همه همگام می‌مانند.
 
-Rule of thumb: **reset** for private history, **revert** for shared history.`,
+قانون سرانگشتی: **reset** برای تاریخچه‌ی خصوصی، **revert** برای تاریخچه‌ی مشترک.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-green-light",
       code: [
-        { text: "git revert <commit>", label: "Undo one commit safely:" },
-        { text: "git revert HEAD", label: "Undo the most recent commit:" },
+        { text: "git revert <commit>", label: "یک commit را امن برگردان:" },
+        { text: "git revert HEAD", label: "جدیدترین commit را برگردان:" },
         {
           text: "git revert --no-commit <commit>",
-          label: "Stage the undo without committing:",
+          label: "undo را stage کن بدون اینکه commit کنی:",
         },
       ],
     },
     {
-      title: "Stash: Park Your Work",
+      title: "Stash: کارت را پارک کن",
       kind: "reaction",
-      desc: `You need to switch branches, but you are mid-change and not ready to commit. Stash shelves the work and gives you a clean tree back.
+      desc: `باید branch عوض کنی، ولی وسط یک تغییر هستی و آماده‌ی commit نیستی. Stash کار را کنار می‌گذارد و یک tree تمیز به تو برمی‌گرداند.
 
-By default \`git stash\` skips untracked files — pass \`-u\` if you want those too.`,
+به‌طور پیش‌فرض \`git stash\` فایل‌های untracked را رد می‌کند — اگر آن‌ها را هم می‌خواهی \`-u\` بده.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-milky",
       code: [
-        { text: "git stash push -m 'wip: login form'", label: "Park it, with a label:" },
-        { text: "git stash list", label: "See what you parked:" },
-        { text: "git stash pop", label: "Bring the newest one back:" },
-        { text: "git stash apply stash@{2}", label: "Bring back a specific one, keep the stash:" },
+        { text: "git stash push -m 'wip: login form'", label: "پارکش کن، با یک برچسب:" },
+        { text: "git stash list", label: "ببین چه چیزی پارک کرده‌ای:" },
+        { text: "git stash pop", label: "جدیدترین را برگردان:" },
+        { text: "git stash apply stash@{2}", label: "یک مورد خاص را برگردان، stash را نگه دار:" },
       ],
     },
     {
-      title: "Committed to the Wrong Branch",
+      title: "Commit روی Branch اشتباه",
       kind: "reaction",
-      desc: `Classic. You committed to \`main\` when you meant to be on a feature branch.
+      desc: `کلاسیک. روی \`main\` commit کردی در حالی که منظورت یک feature branch بود.
 
-Branch off where you are — the commit comes with you — then rewind \`main\` back to where it should have been.`,
+از جایی که هستی branch بگیر — commit با تو می‌آید — بعد \`main\` را به جایی که باید می‌بود برگردان.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-blue-sky",
       code: [
-        { text: "git branch feature/my-work", label: "1. Save the commit onto a new branch:" },
-        { text: "git reset --hard HEAD~1", label: "2. Rewind the branch you were on:" },
-        { text: "git switch feature/my-work", label: "3. Go where you meant to be:" },
+        { text: "git branch feature/my-work", label: "۱. commit را روی یک branch جدید ذخیره کن:" },
+        { text: "git reset --hard HEAD~1", label: "۲. branchای را که روی آن بودی به عقب برگردان:" },
+        { text: "git switch feature/my-work", label: "۳. برو جایی که منظورت بود:" },
       ],
     },
     {
-      title: "Reflog: Git's Black Box",
+      title: "Reflog: جعبه‌ی سیاه Git",
       kind: "reaction",
-      desc: `\`git reflog\` records **every** position HEAD has been in — including the commits you thought you destroyed with \`reset --hard\`.
+      desc: `\`git reflog\` **هر** موقعیتی که HEAD در آن بوده را ثبت می‌کند — شامل commitهایی که فکر می‌کردی با \`reset --hard\` نابودشان کرده‌ای.
 
-Nothing committed is truly gone for about 90 days. When you are certain you lost work, look here **before** you panic.`,
+هیچ چیز commitشده‌ای واقعاً تا حدود ۹۰ روز از بین نمی‌رود. وقتی مطمئن شدی کارت را گم کرده‌ای، **قبل از** اینکه وحشت کنی اول اینجا نگاه کن.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-yellow",
       code: [
-        { text: "git reflog", label: "See everywhere HEAD has been:" },
-        { text: "git reset --hard HEAD@{3}", label: "Jump back to a previous position:" },
-        { text: "git checkout -b rescue HEAD@{3}", label: "Safer: recover onto a new branch:" },
+        { text: "git reflog", label: "ببین HEAD کجا بوده:" },
+        { text: "git reset --hard HEAD@{3}", label: "به یک موقعیت قبلی برگرد:" },
+        { text: "git checkout -b rescue HEAD@{3}", label: "امن‌تر: روی یک branch جدید بازیابی کن:" },
       ],
     },
     {
-      title: "Recover a Deleted Branch",
+      title: "بازیابی یک Branch حذف‌شده",
       kind: "reaction",
-      desc: `Deleting a branch only deletes the **label**. The commits are still there — you just lost the name pointing at them.
+      desc: `حذف یک branch فقط **برچسب** را حذف می‌کند. commitها هنوز آنجا هستند — فقط نامی را که به آن‌ها اشاره می‌کرد گم کرده‌ای.
 
-Find the tip commit in the reflog, then hang a new branch on it.`,
+commit نوک را در reflog پیدا کن، بعد یک branch جدید روی آن آویزان کن.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-teal",
       code: [
-        { text: "git reflog", label: "1. Find the branch's last commit:" },
-        { text: "git branch <name> <commit>", label: "2. Point a branch at it again:" },
+        { text: "git reflog", label: "۱. آخرین commit آن branch را پیدا کن:" },
+        { text: "git branch <name> <commit>", label: "۲. دوباره یک branch را به آن اشاره بده:" },
       ],
     },
     {
-      title: "Recover a Deleted File",
+      title: "بازیابی یک فایل حذف‌شده",
       kind: "reaction",
-      desc: `If the file was ever committed, you can pull it straight back out of history — no need to undo anything else.
+      desc: `اگر فایل تا حالا commit شده باشد، می‌توانی آن را مستقیم از تاریخچه برگردانی — لازم نیست چیز دیگری را برگردانی.
 
-\`git log\` with \`--\` scoped to the path finds the commit that last had it.`,
+\`git log\` با \`--\` که به مسیر محدود شده، commitای را پیدا می‌کند که آخرین بار آن فایل را داشته.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-green-M",
       code: [
-        { text: "git log --oneline -- <file>", label: "Find when it last existed:" },
-        { text: "git restore --source=<commit> -- <file>", label: "Pull that version back:" },
+        { text: "git log --oneline -- <file>", label: "پیدا کن آخرین بار کی وجود داشته:" },
+        { text: "git restore --source=<commit> -- <file>", label: "همان نسخه را برگردان:" },
       ],
     },
     {
-      title: "The Short Version",
+      title: "نسخه‌ی کوتاه",
       kind: "reaction",
-      desc: `**Staged it by mistake** → \`git restore --staged\`
+      desc: `**اشتباهی stage کردی** → \`git restore --staged\`
 
-**Bad edit, not committed** → \`git stash\`, or \`git restore\` if you are sure
+**ویرایش بد، commit نشده** → \`git stash\`، یا \`git restore\` اگر مطمئنی
 
-**Bad commit, not pushed** → \`git reset\`
+**commit بد، push نشده** → \`git reset\`
 
-**Bad commit, already pushed** → \`git revert\`
+**commit بد، قبلاً push شده** → \`git revert\`
 
-**Lost a commit or a branch** → \`git reflog\`
+**یک commit یا branch را گم کردی** → \`git reflog\`
 
-The only thing Git cannot save is work you never staged or committed. Commit early — it is your undo button.`,
+تنها چیزی که Git نمی‌تواند نجات بدهد کاری است که هیچ‌وقت stage یا commit نکرده‌ای. زود commit کن — این دکمه‌ی undo توست.`,
       tags,
       icon: "./assets/git.svg",
       style: "bg-candy-red",

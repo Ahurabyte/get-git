@@ -2,9 +2,9 @@ export const branches = {
   pageName: "branches",
   cards: [
     {
-      title: "Branches",
+      title: "برنچ‌ها",
       kind: "default",
-      desc: "By Parsa Bordbar",
+      desc: "نوشته‌ی Parsa Bordbar",
       tags: [
         {
           text: "git",
@@ -21,20 +21,20 @@ export const branches = {
       style: "bg-candy-pink-strawberry",
     },
     {
-      title: "Git Branch",
+      title: "برنچ گیت",
       desc: `
-A **branch** is a new/separate version of the main repository;
+یک **branch** نسخه‌ی تازه و جداگانه‌ای از repository اصلی است؛
 &nbsp;  
 &nbsp;  
-**Why use branches?**
+**چرا از branch استفاده کنیم؟**
 
 &nbsp;
 &nbsp;
-- Edit the code directly without impacting the main branch.    
+- کد را مستقیم ویرایش کن، بدون اینکه روی branch اصلی اثر بگذارد.    
 &nbsp;
 &nbsp;
 
-Parallel Development.
+توسعه‌ی موازی.
 &nbsp;  
       `,
       kind: "reaction",
@@ -54,7 +54,7 @@ Parallel Development.
       style: "bg-candy-blue-sky",
     },
     {
-      title: "Creating a New Branch",
+      title: "ساختن یک برنچ تازه",
       kind: "reaction",
       tags: [
         {
@@ -71,17 +71,17 @@ Parallel Development.
       code: [
         {
           text: "git branch <new_branch>",
-          label: "creating a new branch:",
+          label: "ساختن یک برنچ تازه:",
         },
         {
           text: "git branch",
-          label: "Viewing all branches:",
+          label: "دیدن همه‌ی برنچ‌ها:",
         },
       ],
       style: "bg-candy-yellow",
     },
     {
-      title: "Changing Branch",
+      title: "عوض کردن برنچ",
       kind: "reaction",
       tags: [
         {
@@ -98,18 +98,18 @@ Parallel Development.
       code: [
         {
           text: "git checkout <branch_name>",
-          label: "Changing to a branch:",
+          label: "رفتن به یک برنچ:",
         },
         {
           text: "git switch <branch_name>",
-          label: "You can also change the branch using:",
+          label: "برای عوض کردن برنچ می‌توانی از این هم استفاده کنی:",
         },
       ],
       style: "bg-[#FFA9E8]",
     },
     {
-      title: "Difference Between Switch & Checkout",
-      desc: `git switch for straightforward branch operations to benefit from its clarity and safety, and reserve git checkout for more advanced tasks like checking out commits or restoring files`,
+      title: "فرق switch و checkout",
+      desc: `از git switch برای عملیات ساده‌ی branch استفاده کن تا از وضوح و امنیتش بهره ببری، و git checkout را برای کارهای پیشرفته‌تر نگه دار، مثل checkout کردن commitها یا برگرداندن فایل‌ها`,
       icon: "./assets/git.svg",
       imgUrl: "",
       style: "bg-candy-teal",

@@ -9,7 +9,7 @@ import ProgressCheck from "../ProgressCheck";
 function FlashCardSeries({
   data,
   navigation,
-  dir = "ltr",
+  dir = "rtl",
 }: {
   data: cardType[];
   navigation?: navigationType;

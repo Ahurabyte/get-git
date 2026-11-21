@@ -4,22 +4,22 @@ export const gitConflictCard: flashCardSeries = {
   pageName: "gitConflictCard",
   cards: [
     {
-      title: "What Is a Git Conflict?",
-      desc: `A **Git conflict** occurs when two branches have changes to the same lines in a file, and Git cannot automatically merge them.
+      title: "کانفلیکت گیت چیست؟",
+      desc: `یک **کانفلیکت گیت** وقتی پیش می‌آید که دو branch خط‌های یکسانی از یک فایل را تغییر داده باشند و گیت نتواند آن‌ها را خودکار merge کند.
 
-    This happens typically during:`,
+    این معمولاً در این مواقع اتفاق می‌افتد:`,
       code: [
         {
           text: "git merge",
-          label: "Merging:",
+          label: "مرج کردن:",
         },
         {
           text: "git pull",
-          label: "Pilling:",
+          label: "Pull کردن:",
         },
         {
           text: "git rebase",
-          label: "Rebasing::",
+          label: "Rebase کردن:",
         },
       ],
       kind: "reaction",
@@ -32,12 +32,12 @@ export const gitConflictCard: flashCardSeries = {
       style: "bg-[#FF9999]",
     },
     {
-      title: "Detecting Conflicts",
-      desc: `When a conflict occurs, Git will pause the operation and mark files as **unmerged**. You can check them using:`,
+      title: "تشخیص کانفلیکت‌ها",
+      desc: `وقتی کانفلیکت پیش می‌آید، گیت عملیات را متوقف می‌کند و فایل‌ها را به‌عنوان **unmerged** علامت می‌زند. می‌توانی با این دستور آن‌ها را بررسی کنی:`,
       kind: "reaction",
       code: [
         {
-          label: "Show conflicted files:",
+          label: "فایل‌های دارای کانفلیکت را نشان بده:",
           text: "git status",
         },
       ],
@@ -50,14 +50,14 @@ export const gitConflictCard: flashCardSeries = {
       style: "bg-[#FFCC70]",
     },
     {
-      title: "Conflict Markers",
-      desc: `Git adds **conflict markers** in files to show conflicting code. Example:
+      title: "نشانه‌های کانفلیکت",
+      desc: `گیت **نشانه‌های کانفلیکت** را در فایل‌ها اضافه می‌کند تا کد متعارض را نشان بدهد. مثال:
 
 \`\`\`
 Their version
 \`\`\`
 
-You need to **edit the file manually** and choose the correct content.`,
+باید **فایل را دستی ویرایش کنی** و محتوای درست را انتخاب کنی.`,
       kind: "reaction",
       tags: [
         { text: "git" },
@@ -68,12 +68,12 @@ You need to **edit the file manually** and choose the correct content.`,
       style: "bg-[#F7BD1D]",
     },
     {
-      title: "Resolving Conflicts",
-      desc: `After editing files and removing conflict markers, you must stage them to tell Git the conflict is resolved.`,
+      title: "حل کانفلیکت‌ها",
+      desc: `بعد از ویرایش فایل‌ها و حذف نشانه‌های کانفلیکت، باید آن‌ها را stage کنی تا به گیت بگویی کانفلیکت حل شده است.`,
       kind: "reaction",
       code: [
         {
-          label: "Stage resolved file:",
+          label: "فایل حل‌شده را stage کن:",
           text: "git add <filename>",
         },
       ],
@@ -85,12 +85,12 @@ You need to **edit the file manually** and choose the correct content.`,
       style: "bg-[#7B9D7C]",
     },
     {
-      title: "Completing the Merge",
-      desc: `Once all conflicts are resolved and staged, complete the merge with a commit:`,
+      title: "کامل کردن مرج",
+      desc: `وقتی همه‌ی کانفلیکت‌ها حل و stage شدند، مرج را با یک commit کامل کن:`,
       kind: "reaction",
       code: [
         {
-          label: "Commit after resolving:",
+          label: "بعد از حل، commit کن:",
           text: "git commit",
         },
       ],
@@ -102,12 +102,12 @@ You need to **edit the file manually** and choose the correct content.`,
       style: "bg-[#C5C6FF]",
     },
     {
-      title: "Abort a Merge (Optional)",
-      desc: `If things get messy and you want to cancel the merge entirely:`,
+      title: "لغو مرج (اختیاری)",
+      desc: `اگر اوضاع به‌هم‌ریخت و می‌خواهی مرج را کاملاً لغو کنی:`,
       kind: "reaction",
       code: [
         {
-          label: "Abort merge:",
+          label: "لغو مرج:",
           text: "git merge --abort",
         },
       ],
@@ -119,12 +119,12 @@ You need to **edit the file manually** and choose the correct content.`,
       style: "bg-[#FFA9E8]",
     },
     {
-      title: "Visual Conflict Resolution",
-      desc: `Many editors (e.g., **VSCode**, **Sublime**, or tools like **GitKraken**) provide visual interfaces to resolve conflicts easily.
+      title: "حل تصویری کانفلیکت",
+      desc: `خیلی از ادیتورها (مثلاً **VSCode**، **Sublime**، یا ابزارهایی مثل **GitKraken**) رابط‌های تصویری برای حل راحت کانفلیکت‌ها دارند.
 
-Look for:  
-- Sections marked "Current Change" vs "Incoming Change"  
-- One-click options to "Accept Current", "Accept Incoming", or "Accept Both"`,
+دنبال این‌ها بگرد:  
+- بخش‌هایی با عنوان "Current Change" در برابر "Incoming Change"  
+- گزینه‌های یک‌کلیکی "Accept Current" و "Accept Incoming" یا "Accept Both"`,
       kind: "reaction",
       tags: [
         { text: "git" },
@@ -136,14 +136,14 @@ Look for:
       style: "bg-[#04BFA4]",
     },
     {
-      title: "Practice Scenario: Git Conflict",
-      desc: `Try creating a conflict manually:
+      title: "تمرین عملی: کانفلیکت گیت",
+      desc: `سعی کن خودت دستی یک کانفلیکت بسازی:
 
-1. Create a file and commit it
-2. Create a branch and edit the same line
-3. Switch to main, edit same line, commit
-4. Merge the branch: \`git merge branch_name\`  
-You'll hit a conflict — now practice resolving it!`,
+1. یک فایل بساز و commitاش کن
+2. یک branch بساز و همان خط را ویرایش کن
+3. به main برگرد، همان خط را ویرایش کن و commit کن
+4. branch را مرج کن: \`git merge branch_name\`  
+به یک کانفلیکت می‌رسی — حالا حل کردنش را تمرین کن!`,
       kind: "reaction",
       tags: [
         { text: "git" },

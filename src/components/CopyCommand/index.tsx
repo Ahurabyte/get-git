@@ -35,7 +35,7 @@ const CopyCommand = ({ label, text }: copyType) => {
           className="cursor-pointer bg-gray-300 rounded-xl sm:rounded-2xl 
           px-2 sm:px-3 h-8 sm:h-9 text-sm sm:text-base flex-shrink-0"
         >
-          {copied ? "Copied!" : "Copy"}
+          {copied ? "کپی شد!" : "کپی"}
         </button>
       </div>
     </div>

@@ -40,7 +40,7 @@ function Header() {
 
         <button
           type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? "بستن منو" : "باز کردن منو"}
           aria-expanded={open}
           aria-controls="site-menu"
           onClick={() => setOpen((o) => !o)}
@@ -85,7 +85,7 @@ function Header() {
               className={`flex items-center gap-3 rounded-2xl px-4 py-3 font-bold border-2 border-b-[5px] border-stone-850
                 ${isHome ? "bg-stone-850 !text-white" : "bg-white !text-slate-900"}`}
             >
-              Home
+              خانه
             </a>
           </li>
           {series.map((s, i) => {
@@ -107,7 +107,7 @@ function Header() {
                   <span className="ms-auto flex items-center gap-2 text-xs font-medium opacity-60">
                     {s.badge}
                     {isDone(s.path) && (
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3.5} strokeLinecap="round" strokeLinejoin="round" className="size-4 opacity-100" aria-label="Done">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3.5} strokeLinecap="round" strokeLinejoin="round" className="size-4 opacity-100" aria-label="تمام شد">
                         <path d="M5 12.5l4.5 4.5L19 7" />
                       </svg>
                     )}
@@ -123,7 +123,7 @@ function Header() {
               className={`mt-2 flex items-center gap-3 rounded-2xl px-4 py-3 font-bold border-2 border-b-[5px] border-stone-850
                 ${current.startsWith("/get-git/tags") ? "bg-stone-850 !text-white" : "bg-white !text-slate-900"}`}
             >
-              Browse by tag
+              مرور بر اساس برچسب
             </a>
           </li>
         </ul>

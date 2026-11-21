@@ -2,7 +2,7 @@ export const basics = {
   pageName: "Basics",
   cards: [
     {
-      title: "Git Crash Course",
+      title: "دوره‌ی فشرده‌ی Git",
       kind: "default",
       desc: "By Parsa Bordbar",
       tags: [
@@ -21,11 +21,10 @@ export const basics = {
       style: "bg-candy-blue-sky",
     },
     {
-      title: "What Is Git?",
-      desc: `**Git** is a **free** and **open source** distributed version control system designed to handle everything 
-      from small to very large projects with speed and efficiency. [Git](https://git-scm.com/) is easy to learn and has a tiny footprint
-      with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with
-      features like cheap local branching, convenient staging areas, and multiple workflows.
+      title: "Git چیست؟",
+      desc: `**Git** یک سیستم کنترل نسخه‌ی توزیع‌شده‌ی **رایگان** و **متن‌باز** است که برای مدیریت همه‌چیز طراحی شده 
+      است؛ از پروژه‌های کوچک تا پروژه‌های خیلی بزرگ، با سرعت و کارایی. یاد گرفتن [Git](https://git-scm.com/) راحت است و حجم خیلی کمی دارد
+      و عملکردش برق‌آساست. با امکاناتی مثل branching محلی ارزان، staging area های مناسب و workflow های متعدد، از ابزارهای SCM مثل Subversion و CVS و Perforce و ClearCase بهتر است.
       
       `,
       kind: "reaction",
@@ -45,7 +44,7 @@ export const basics = {
       style: "bg-[#04BFA4]",
     },
     {
-      title: "Installation",
+      title: "نصب",
       kind: "reaction",
       tags: [
         {
@@ -62,22 +61,22 @@ export const basics = {
       code: [
         {
           text: "sudo apt install git",
-          label: "Debian Base Linux:",
+          label: "لینوکس مبتنی بر Debian:",
         },
         {
           text: "sudo pacman -S git",
-          label: "Arch Base Linux:",
+          label: "لینوکس مبتنی بر Arch:",
         },
         {
           text: "brew install git",
-          label: "Mac Os:",
+          label: "Mac OS:",
         },
       ],
-      desc: "If you use windows download it from [here](https://git-scm.com/download/win)",
+      desc: "اگر از Windows استفاده می‌کنی، آن را از [اینجا](https://git-scm.com/download/win) دانلود کن",
       style: "bg-[#07AF57]",
     },
     {
-      title: "Set Your Identity",
+      title: "هویت خودت را تنظیم کن",
       kind: "reaction",
       tags: [
         {
@@ -94,17 +93,17 @@ export const basics = {
       code: [
         {
           text: 'git config --global user.name "Your Name"',
-          label: "Setting your name:",
+          label: "تنظیم نام:",
         },
         {
           text: 'git config --global user.email "your.email@example.com',
-          label: "Setting your Email",
+          label: "تنظیم ایمیل",
         },
       ],
       style: "bg-[#FFA9E8]",
     },
     {
-      title: "Stages",
+      title: "مرحله‌ها",
       kind: "reaction",
       tags: [
         {
@@ -122,8 +121,8 @@ export const basics = {
       style: "bg-[#7B9D7C]",
     },
     {
-      title: "New Repository",
-      desc: `We can initialize a new Repository in current Directory with:`,
+      title: "Repository جدید",
+      desc: `می‌توانیم یک Repository جدید را در Directory فعلی با این دستور راه‌اندازی کنیم:`,
       code: [
         {
           text: "git init",
@@ -148,7 +147,7 @@ export const basics = {
     {
       title: "Git Status",
       kind: "reaction",
-      desc: "Tells you which files are modified, staged, or untracked.",
+      desc: "به تو می‌گوید کدام فایل‌ها تغییر کرده‌اند، کدام‌ها staged شده‌اند و کدام‌ها untracked هستند.",
       code: [
         {
           text: "git status",
@@ -171,7 +170,7 @@ export const basics = {
     },
     {
       title: "Git Add",
-      desc: `You can add files to **staging area** so that git can keep track of the changes:`,
+      desc: `می‌توانی فایل‌ها را به **staging area** اضافه کنی تا Git تغییرات را دنبال کند:`,
       kind: "reaction",
       code: [
         {
@@ -195,7 +194,7 @@ export const basics = {
     },
     {
       title: "Git Commit",
-      desc: `A **meaning** full message that says what has been changed in the new code.`,
+      desc: `یک پیام **معنادار** که می‌گوید در کد جدید چه چیزی تغییر کرده است.`,
       kind: "reaction",
       code: [
         {
@@ -219,15 +218,15 @@ export const basics = {
     },
     {
       title: "Git Push",
-      desc: `Sharing our code with other in the remote repo, **Github** in this case.`,
+      desc: `به‌اشتراک گذاشتن کدمان با دیگران در remote repo — در این مثال **GitHub**.`,
       kind: "reaction",
       code: [
         {
-          label: "Pushing to a repo we have cloned or stablish:",
+          label: "Push کردن به repoای که clone کرده‌ایم یا ساخته‌ایم:",
           text: "git push",
         },
         {
-          label: "Pushing the local repo into Github:",
+          label: "Push کردن repoی محلی به GitHub:",
           text: `git remote add origin <github_repo>
           git branch -M main
           git push -u origin main`,
