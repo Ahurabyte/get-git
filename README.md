@@ -4,7 +4,7 @@
 
 این نسخه‌ی فارسی [Get-Git](https://github.com/ParsaBordbar/get-git) است؛ پروژه‌ی اصلی کار [Parsa Bordbar](https://github.com/ParsaBordbar) است و ترجمه‌ی فارسی کارت‌ها و رابط کاربری را من (Ahura) انجام دادم. دستورات گیت و اصطلاحات تخصصی (commit، branch، merge و…) به انگلیسی مانده‌اند.
 
-نسخه‌ی زنده‌ی فارسی را این‌جا بخوانید: [ahurabyte.github.io/get-git](https://ahurabyte.github.io/get-git/)
+نسخه‌ی زنده‌ی فارسی را این‌جا بخوانید: [ahuracode.github.io/get-git](https://ahuracode.github.io/get-git/)
 
 # Get-Git
 
@@ -42,7 +42,7 @@
 
 1. **کلون کردن ریپو**:
    ```bash
-   git clone https://github.com/Ahurabyte/get-git.git
+   git clone https://github.com/Ahuracode/get-git.git
    cd get-git
    ```
 2. **نصب وابستگی‌ها**:
